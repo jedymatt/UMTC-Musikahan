@@ -13,17 +13,19 @@ body{
 .fadeout{
     animation: fadeOut 1s normal ease-in-out;
 }
-.note1{
+
+.note {
     width: 50px;
-    animation: jump 0.5s infinite ease-in-out 1s;
+    animation: jump 1.2s linear infinite;
 }
-.note2{
-    width: 50px;
-    animation: jump 0.7s infinite ease-in-out 1.5s;
+.note:nth-child(1) {
+    animation-delay: 0s;
 }
-.note3{
-    width: 50px;
-    animation: jump 0.9s infinite ease-in-out 2s;
+.note:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.note:nth-child(3) {
+    animation-delay: 0.6s;
 }
 .notes{
     height: 100vh;
