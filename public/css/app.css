@@ -16,16 +16,16 @@ body{
 
 .note {
     width: 50px;
-    animation: jump 1.2s linear infinite;
+    animation: jump 1s linear infinite;
 }
 .note:nth-child(1) {
     animation-delay: 0s;
 }
 .note:nth-child(2) {
-    animation-delay: 0.3s;
+    animation-delay: 0.25s;
 }
 .note:nth-child(3) {
-    animation-delay: 0.6s;
+    animation-delay: 0.5s;
 }
 .notes{
     height: 100vh;
