@@ -1,7 +1,14 @@
 ---
-import NavLink from "../components/NavLink.astro";
-const pathname = new URL(Astro.request.url).pathname;
-const currentPath = `/${pathname.slice(1)}`;
+import AppFooter from "../components/AppFooter.astro";
+import AppNav from "../components/AppNav.astro";
+
+export interface Props {
+    title?: string;
+}
+
+let { title } = Astro.props;
+
+title = title ? `${title} | Musikahan - Tagum City` : 'Musikahan - Tagum City';
 ---
 
 <!DOCTYPE html>
@@ -12,32 +19,17 @@ const currentPath = `/${pathname.slice(1)}`;
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content={Astro.generator} />
-        <title>Musikahan - Tagum City</title>
+        <title>{title}</title>
     </head>
     <body>
-        <nav
-            class="flex flex-row justify-center items-center gap-4 py-4 h-[10vh] sticky top-0 z-50 backdrop-blur bg-white/70 shadow-md"
-        >
-            <a
-                href="/"
-                class={(currentPath === "/" ? "text-green-600" : "", "un")}
-            >
-                <img
-                    class="h-12"
-                    src="/assets/images/logo-16x9.png"
-                    alt="Logo"
-                />
-            </a>
-            <NavLink href="/" currentPath={currentPath}>Home</NavLink>
-            <NavLink href="/schedule" currentPath={currentPath}>
-                Schedule
-            </NavLink>
-            <NavLink href="/news" currentPath={currentPath}>News</NavLink>
-        </nav>
+        <AppNav />
         <slot />
-
-        <footer>
-            <div></div>
-        </footer>
+        <AppFooter />
     </body>
 </html>
+
+<style is:global>
+    :root {
+        --primary: #239a4e;
+    }
+</style>

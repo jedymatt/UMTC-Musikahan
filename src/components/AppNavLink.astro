@@ -4,12 +4,16 @@ export interface Props {
     currentPath: string;
 }
 
-const { href, currentPath } = Astro.props;
+let { href, currentPath } = Astro.props;
 
-const path = currentPath.startsWith("/") ? currentPath : `/${currentPath}`;
+function isActiveLink(): boolean {
+    currentPath = currentPath.startsWith("/") ? currentPath : `/${currentPath}`;
+    
+    return href === currentPath;
+}
 ---
 
-<a href={href} class:list={["un", { "text-green-600": path === href }]}>
+<a href={href} class:list={["un", { "text-green-600 font-bold": isActiveLink() }]}>
     <slot />
 </a>
 

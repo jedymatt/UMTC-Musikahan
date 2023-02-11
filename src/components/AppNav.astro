@@ -1,0 +1,15 @@
+---
+import AppNavLink from "./AppNavLink.astro";
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = `/${pathname.slice(1)}`;
+---
+
+<nav
+    class="flex justify-center items-center gap-6 py-4 backdrop-blur bg-white/70 shadow-md uppercase tracking-widest flex-col sm:flex-row"
+>
+    <AppNavLink href="/" currentPath={currentPath}>Home</AppNavLink>
+    <AppNavLink href="/schedule" currentPath={currentPath}>Schedule</AppNavLink>
+    <AppNavLink href="/news" currentPath={currentPath}>News</AppNavLink>
+    <AppNavLink href="/about-us" currentPath={currentPath}>About Us</AppNavLink>
+</nav>
