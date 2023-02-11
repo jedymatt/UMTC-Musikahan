@@ -1,0 +1,68 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="About Us">
+    <main>
+        <div class="min-h-screen">
+            <div class="bg-white">
+                <div class="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8">
+                    <div class="text-center">
+                        <h2
+                            class="text-lg font-semibold text-[var(--umtc-primary)]"
+                        >
+                            About us
+                        </h2>
+                        <div class="mt-16 flex justify-center">
+                            <img
+                                class="h-44 w-44"
+                                src="/assets/images/umtc-logo.png"
+                                alt="UMTC Logo"
+                            />
+                        </div>
+                        <p
+                            class="mt-4 text-4xl font-bold tracking-tight text-[var(--umtc-primary)] sm:text-5xl lg:text-6xl"
+                        >
+                            University of Mindanao Tagum College
+                        </p>
+
+                        <p class="mx-auto mt-5 max-w-xl text-xl text-gray-500">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Laudantium iste facilis fugit aspernatur,
+                            commodi tempora!
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        Cards here with the developer's profile
+                    </div>
+                    <div class="mt-16 flex justify-center items-center">
+                        <div class="relative">
+                            <div
+                                class="rounded-md h-72 w-48 -rotate-[10deg] absolute z-[1] overflow-clip"
+                            >
+                                <img
+                                    src="https://picsum.photos/seed/1/200/300"
+                                    alt=""
+                                />
+                            </div>
+                            <div
+                                class="rounded-md h-72 w-48 -rotate-[24deg] overflow-clip"
+                            >
+                                <img
+                                    src="https://picsum.photos/seed/2/200/300"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    :root {
+        --umtc-primary: #af2532;
+    }
+</style>
