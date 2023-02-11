@@ -1,7 +1,14 @@
 ---
+import PostCard from "../components/PostCard.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="News">
-    <main></main>
+    <main>
+        <div class="p-12 flex flex-col items-center justify-center gap-12">
+            <PostCard />
+            <PostCard />
+            <PostCard />
+        </div>
+    </main>
 </Layout>
