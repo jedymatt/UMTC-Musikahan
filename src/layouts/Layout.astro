@@ -8,7 +8,7 @@ export interface Props {
 
 let { title } = Astro.props;
 
-title = title ? `${title} | Musikahan - Tagum City` : 'Musikahan - Tagum City';
+title = title ? `${title} | Musikahan - Tagum City` : "Musikahan - Tagum City";
 ---
 
 <!DOCTYPE html>
@@ -22,9 +22,11 @@ title = title ? `${title} | Musikahan - Tagum City` : 'Musikahan - Tagum City';
         <title>{title}</title>
     </head>
     <body>
-        <AppNav />
-        <slot />
-        <AppFooter />
+        <div class="relative">
+            <AppNav />
+            <slot />
+            <AppFooter />
+        </div>
     </body>
 </html>
 
