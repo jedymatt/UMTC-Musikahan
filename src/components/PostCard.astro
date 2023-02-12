@@ -1,10 +1,13 @@
 ---
 export interface Props {
     images?: string[];
+    id: string;
 }
+
+const { images, id } = Astro.props;
 ---
 
-<div class="px-8 py-12 rounded-lg shadow-md border">
+<div id={id} class="px-8 py-12 rounded-lg shadow-md border">
     <div class="text-2xl font-bold">
         <slot name="title" />
     </div>
@@ -18,56 +21,48 @@ export interface Props {
             <div class="carousel">
                 <!-- Indicators -->
                 <div class="indicators">
-                    <button class="indicator">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            x="0px"
-                            y="0px"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                d="M20,4v4c0,0.55-0.45,1-1,1h-6v8c0,2.76-2.24,5-5,5s-5-2.24-5-5s2.24-5,5-5c1.13,0,2.16,0.39,3,1.03V4c0-0.55,0.45-1,1-1h7 C19.55,3,20,3.45,20,4z"
-                            ></path>
-                        </svg>
-                    </button>
-                    <button class="indicator">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            x="0px"
-                            y="0px"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                d="M20,4v4c0,0.55-0.45,1-1,1h-6v8c0,2.76-2.24,5-5,5s-5-2.24-5-5s2.24-5,5-5c1.13,0,2.16,0.39,3,1.03V4c0-0.55,0.45-1,1-1h7 C19.55,3,20,3.45,20,4z"
-                            ></path>
-                        </svg>
-                    </button>
+                    {
+                        images?.map((_) => {
+                            return (
+                                <button class="indicator">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        x="0px"
+                                        y="0px"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path d="M20,4v4c0,0.55-0.45,1-1,1h-6v8c0,2.76-2.24,5-5,5s-5-2.24-5-5s2.24-5,5-5c1.13,0,2.16,0.39,3,1.03V4c0-0.55,0.45-1,1-1h7 C19.55,3,20,3.45,20,4z" />
+                                    </svg>
+                                </button>
+                            );
+                        })
+                    }
                 </div>
 
                 <!-- Container -->
                 <div class="relative px-16 pb-8">
-                    <div class="slide">
-                        <img
-                            class="rounded-lg"
-                            src="https://picsum.photos/1280/720?random=1"
-                            alt=""
-                        />
-                    </div>
-                    <div class="slide">
-                        <img
-                            class="rounded-lg"
-                            src="https://picsum.photos/1280/720?random=2"
-                            alt=""
-                        />
-                    </div>
+                    {
+                        images?.map((image) => {
+                            return (
+                                <div class="slide">
+                                    <img
+                                        class="rounded-lg"
+                                        src={image}
+                                        alt=""
+                                    />
+                                </div>
+                            );
+                        })
+                    }
                 </div>
 
                 <!-- Prev button -->
-                <button onclick="plusSlides(-1)" class="absolute inset-y-0">
+                <button
+                    onclick="plusSlides(-1)"
+                    class="prev-button absolute inset-y-0"
+                >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
@@ -84,7 +79,7 @@ export interface Props {
                 <!-- Next Button -->
                 <button
                     onclick="plusSlides(1)"
-                    class="absolute inset-y-0 right-0"
+                    class="next-button absolute inset-y-0 right-0"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -121,27 +116,34 @@ export interface Props {
         justify-content: center;
         gap: 0.5rem;
     }
-    .indicator {
+    .indicators > .indicator {
         border-radius: 100%;
         padding: 0.25rem;
         fill: var(--primary);
     }
-    .indicator:hover:not(.active) {
+    .indicators > .indicator:hover:not(.active) {
         background-color: #caffd2;
     }
 
-    .indicator > svg {
+    .indicators > .indicator > svg {
         width: 1.125rem;
         height: 1.125rem;
     }
 
-    .indicator.active {
+    .indicators > .indicator.active {
         fill: white;
         background-color: var(--primary);
     }
+    .slide {
+        display: none;
+    }
+    .slide:nth-child(1) {
+        display: block;
+    }
 </style>
 
-<script is:inline>
+<script is:inline define:vars={{ id }}>
+    const thisComponent = document.getElementById(id);
     var slideIndex = 0;
     showSlides(slideIndex);
 
@@ -152,7 +154,7 @@ export interface Props {
     function showSlides(n) {
         slideIndex = n;
         var i;
-        var slides = document.getElementsByClassName("slide");
+        var slides = thisComponent.getElementsByClassName("slide");
         if (n > slides.length - 1) {
             slideIndex = 0;
         }
@@ -166,17 +168,30 @@ export interface Props {
         }
         slides[slideIndex].style.display = "block";
 
-        const indicators = document.getElementsByClassName("indicator");
+        const indicators = thisComponent.getElementsByClassName("indicator");
         for (let i = 0; i < indicators.length; i++) {
             indicators[i].classList.remove("active");
         }
         indicators[slideIndex].classList.add("active");
     }
 
-    var indicators = document.getElementsByClassName("indicator");
+    var indicators = thisComponent.getElementsByClassName("indicator");
     for (let i = 0; i < indicators.length; i++) {
         indicators[i].addEventListener("click", () => {
             showSlides(i);
         });
     }
+
+    // Next/previous controls
+    thisComponent
+        .getElementsByClassName("next-button")[0]
+        .addEventListener("click", () => {
+            plusSlides(1);
+        });
+
+    thisComponent
+        .getElementsByClassName("prev-button")[0]
+        .addEventListener("click", () => {
+            plusSlides(-1);
+        });
 </script>
