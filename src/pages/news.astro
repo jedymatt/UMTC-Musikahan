@@ -6,9 +6,15 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="News">
     <main>
         <div class="p-12 flex flex-col items-center justify-center gap-12">
-            <PostCard />
-            <PostCard />
-            <PostCard />
+            <PostCard>
+                <h2 slot="title">Lorem ipsum, dolor sit</h2>
+                <p slot="description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Numquam dolore accusamus repellat, error assumenda voluptate
+                    reiciendis at ea expedita, eaque sequi maiores dicta libero
+                    tempora doloribus nihil. Nostrum, tenetur aliquid!
+                </p>
+            </PostCard>
         </div>
     </main>
 </Layout>
