@@ -5,7 +5,9 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="News">
     <main>
-        <div class="sm:p-12 px-6 flex flex-col items-center justify-center gap-12">
+        <div
+            class="sm:p-12 px-6 flex flex-col items-center justify-center gap-12"
+        >
             <PostCard
                 id="news-1"
                 images={[
@@ -21,6 +23,7 @@ import Layout from "../layouts/Layout.astro";
                     reiciendis at ea expedita, eaque sequi maiores dicta libero
                     tempora doloribus nihil. Nostrum, tenetur aliquid!
                 </p>
+                <span slot="source">Source: News TV</span>
             </PostCard>
             <PostCard
                 id="news-2"
@@ -36,6 +39,7 @@ import Layout from "../layouts/Layout.astro";
                     reiciendis at ea expedita, eaque sequi maiores dicta libero
                     tempora doloribus nihil. Nostrum, tenetur aliquid!
                 </p>
+                <span slot="source">Source: News TV</span>
             </PostCard>
             <PostCard
                 id="news-3"
@@ -51,6 +55,7 @@ import Layout from "../layouts/Layout.astro";
                     reiciendis at ea expedita, eaque sequi maiores dicta libero
                     tempora doloribus nihil. Nostrum, tenetur aliquid!
                 </p>
+                <span slot="source">Source: News TV</span>
             </PostCard>
         </div>
     </main>
