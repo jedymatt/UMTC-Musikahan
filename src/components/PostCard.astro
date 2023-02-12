@@ -1,98 +1,197 @@
-<div class="w-[75vw] px-8 py-12 rounded-lg shadow-md border">
-    <h2 class="text-2xl font-bold">Lorem ipsum dolor sit amet</h2>
-    <p class="mt-4">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia
-        corrupti exercitationem quis omnis quam obcaecati expedita. Eos
-        accusamus enim, blanditiis impedit ullam obcaecati modi maiores corporis
-        ducimus. Magni, aspernatur modi?
-    </p>
-    <p class="mt-1 italic text-gray-700">Source: Lorem ipsum</p>
-    <div class="mt-4 p-4">
-        <!-- Carousel -->
-        <div class="relative w-full">
-            <!-- Indicators -->
-            <div
-                class="absolute inset-x-0 bottom-0 flex flex-row justify-center gap-4"
-            >
-                <svg
-                    class="h-5 w-5"
-                    xmlns="http://www.w3.org/2000/svg"
-                    x="0px"
-                    y="0px"
-                    width="100"
-                    height="100"
-                    viewBox="0 0 24 24"
-                >
-                    <path
-                        d="M 13 0 L 13 2.8125 C 12.992188 2.875 12.992188 2.9375 13 3 L 13 17.09375 C 12.40625 16.9375 11.730469 16.925781 11 17.09375 C 8.800781 17.59375 7 19.507813 7 21.40625 C 7 23.304688 8.800781 24.3125 11 23.8125 C 13.199219 23.3125 15 21.398438 15 19.5 C 15 19.46875 15 19.4375 15 19.40625 C 15.007813 19.332031 15.007813 19.261719 15 19.1875 L 15 4.1875 C 20.027344 5.222656 21 10 21 10 L 21 7.40625 C 21 3.90625 18.101563 0 13 0 Z"
-                    ></path>
-                </svg>
-                <svg
-                    class="h-5 w-5"
-                    xmlns="http://www.w3.org/2000/svg"
-                    x="0px"
-                    y="0px"
-                    width="100"
-                    height="100"
-                    viewBox="0 0 24 24"
-                >
-                    <path
-                        d="M 13 0 L 13 2.8125 C 12.992188 2.875 12.992188 2.9375 13 3 L 13 17.09375 C 12.40625 16.9375 11.730469 16.925781 11 17.09375 C 8.800781 17.59375 7 19.507813 7 21.40625 C 7 23.304688 8.800781 24.3125 11 23.8125 C 13.199219 23.3125 15 21.398438 15 19.5 C 15 19.46875 15 19.4375 15 19.40625 C 15.007813 19.332031 15.007813 19.261719 15 19.1875 L 15 4.1875 C 20.027344 5.222656 21 10 21 10 L 21 7.40625 C 21 3.90625 18.101563 0 13 0 Z"
-                    ></path>
-                </svg>
-                <svg
-                    class="h-5 w-5"
-                    xmlns="http://www.w3.org/2000/svg"
-                    x="0px"
-                    y="0px"
-                    width="100"
-                    height="100"
-                    viewBox="0 0 24 24"
-                >
-                    <path
-                        d="M 13 0 L 13 2.8125 C 12.992188 2.875 12.992188 2.9375 13 3 L 13 17.09375 C 12.40625 16.9375 11.730469 16.925781 11 17.09375 C 8.800781 17.59375 7 19.507813 7 21.40625 C 7 23.304688 8.800781 24.3125 11 23.8125 C 13.199219 23.3125 15 21.398438 15 19.5 C 15 19.46875 15 19.4375 15 19.40625 C 15.007813 19.332031 15.007813 19.261719 15 19.1875 L 15 4.1875 C 20.027344 5.222656 21 10 21 10 L 21 7.40625 C 21 3.90625 18.101563 0 13 0 Z"
-                    ></path>
-                </svg>
-            </div>
+---
+export interface Props {
+    images?: string[];
+    id: string;
+}
 
-            <!-- Main Content Image -->
-            <div class="relative w-full overflow-hidden px-24 pb-12 pt-4">
-                <img
-                    class="rounded-lg"
-                    src="https://picsum.photos/1280/720"
-                    alt=""
-                />
-            </div>
+const { images, id } = Astro.props;
+---
 
-            <!-- Prev button -->
-            <button class="absolute inset-y-0">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-12 h-12"
-                >
-                    <path
-                        fill-rule="evenodd"
-                        d="M7.72 12.53a.75.75 0 010-1.06l7.5-7.5a.75.75 0 111.06 1.06L9.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </button>
-
-            <!-- Next Button -->
-            <button class="absolute inset-y-0 right-0">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-12 h-12"
-                >
-                    <path
-                        fill-rule="evenodd"
-                        d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </button>
-        </div>
+<div id={id} class="px-8 py-12 rounded-lg shadow-md border">
+    <div class="text-2xl font-bold">
+        <slot name="title" />
     </div>
+    <div class="mt-4">
+        <slot name="description" />
+    </div>
+    <p class="mt-1 italic text-gray-700">
+        <slot name="source" />
+        <div class="mt-4">
+            <!-- Carousel -->
+            <div class="carousel">
+                <!-- Indicators -->
+                <div class="indicators">
+                    {
+                        images?.map((_) => {
+                            return (
+                                <button class="indicator">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        x="0px"
+                                        y="0px"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path d="M20,4v4c0,0.55-0.45,1-1,1h-6v8c0,2.76-2.24,5-5,5s-5-2.24-5-5s2.24-5,5-5c1.13,0,2.16,0.39,3,1.03V4c0-0.55,0.45-1,1-1h7 C19.55,3,20,3.45,20,4z" />
+                                    </svg>
+                                </button>
+                            );
+                        })
+                    }
+                </div>
+
+                <!-- Container -->
+                <div class="relative px-16 pb-8">
+                    {
+                        images?.map((image) => {
+                            return (
+                                <div class="slide">
+                                    <img
+                                        class="rounded-lg"
+                                        src={image}
+                                        alt=""
+                                    />
+                                </div>
+                            );
+                        })
+                    }
+                </div>
+
+                <!-- Prev button -->
+                <button
+                    onclick="plusSlides(-1)"
+                    class="prev-button absolute inset-y-0"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="var(--primary)"
+                        class="w-12 h-12"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M7.72 12.53a.75.75 0 010-1.06l7.5-7.5a.75.75 0 111.06 1.06L9.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+
+                <!-- Next Button -->
+                <button
+                    onclick="plusSlides(1)"
+                    class="next-button absolute inset-y-0 right-0"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="var(--primary)"
+                        class="w-12 h-12"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </p>
 </div>
+
+<style>
+    .carousel {
+        position: relative;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: 100%;
+        height: auto;
+    }
+    .indicators {
+        display: flex;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    .indicators > .indicator {
+        border-radius: 100%;
+        padding: 0.25rem;
+        fill: var(--primary);
+    }
+    .indicators > .indicator:hover:not(.active) {
+        background-color: #caffd2;
+    }
+
+    .indicators > .indicator > svg {
+        width: 1.125rem;
+        height: 1.125rem;
+    }
+
+    .indicators > .indicator.active {
+        fill: white;
+        background-color: var(--primary);
+    }
+    .slide {
+        display: none;
+    }
+    .slide:nth-child(1) {
+        display: block;
+    }
+</style>
+
+<script is:inline define:vars={{ id }}>
+    const thisComponent = document.getElementById(id);
+    var slideIndex = 0;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides((slideIndex += n));
+    }
+
+    function showSlides(n) {
+        slideIndex = n;
+        var i;
+        var slides = thisComponent.getElementsByClassName("slide");
+        if (n > slides.length - 1) {
+            slideIndex = 0;
+        }
+
+        if (n < 0) {
+            slideIndex = slides.length - 1;
+        }
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex].style.display = "block";
+
+        const indicators = thisComponent.getElementsByClassName("indicator");
+        for (let i = 0; i < indicators.length; i++) {
+            indicators[i].classList.remove("active");
+        }
+        indicators[slideIndex].classList.add("active");
+    }
+
+    var indicators = thisComponent.getElementsByClassName("indicator");
+    for (let i = 0; i < indicators.length; i++) {
+        indicators[i].addEventListener("click", () => {
+            showSlides(i);
+        });
+    }
+
+    // Next/previous controls
+    thisComponent
+        .getElementsByClassName("next-button")[0]
+        .addEventListener("click", () => {
+            plusSlides(1);
+        });
+
+    thisComponent
+        .getElementsByClassName("prev-button")[0]
+        .addEventListener("click", () => {
+            plusSlides(-1);
+        });
+</script>

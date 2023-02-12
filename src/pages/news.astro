@@ -6,9 +6,52 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="News">
     <main>
         <div class="p-12 flex flex-col items-center justify-center gap-12">
-            <PostCard />
-            <PostCard />
-            <PostCard />
+            <PostCard
+                id="news-1"
+                images={[
+                    "https://picsum.photos/1280/720?random=1",
+                    "https://picsum.photos/1280/720?random=2",
+                    "https://picsum.photos/1280/720?random=3",
+                ]}
+            >
+                <h2 slot="title">Lorem ipsum, dolor sit</h2>
+                <p slot="description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Numquam dolore accusamus repellat, error assumenda voluptate
+                    reiciendis at ea expedita, eaque sequi maiores dicta libero
+                    tempora doloribus nihil. Nostrum, tenetur aliquid!
+                </p>
+            </PostCard>
+            <PostCard
+                id="news-2"
+                images={[
+                    "https://picsum.photos/1280/720?random=2",
+                    "https://picsum.photos/1280/720?random=3",
+                ]}
+            >
+                <h2 slot="title">Lorem ipsum, dolor sit</h2>
+                <p slot="description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Numquam dolore accusamus repellat, error assumenda voluptate
+                    reiciendis at ea expedita, eaque sequi maiores dicta libero
+                    tempora doloribus nihil. Nostrum, tenetur aliquid!
+                </p>
+            </PostCard>
+            <PostCard
+                id="news-3"
+                images={[
+                    "https://picsum.photos/1280/720?random=4",
+                    "https://picsum.photos/1280/720?random=5",
+                ]}
+            >
+                <h2 slot="title">Lorem ipsum, dolor sit</h2>
+                <p slot="description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Numquam dolore accusamus repellat, error assumenda voluptate
+                    reiciendis at ea expedita, eaque sequi maiores dicta libero
+                    tempora doloribus nihil. Nostrum, tenetur aliquid!
+                </p>
+            </PostCard>
         </div>
     </main>
 </Layout>
