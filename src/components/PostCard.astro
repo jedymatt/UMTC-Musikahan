@@ -7,7 +7,10 @@ export interface Props {
 const { images, id } = Astro.props;
 ---
 
-<div id={id} class="px-8 py-12 rounded-lg shadow-md border">
+<div
+    id={id}
+    class="sm:w-3/4 w-full sm:px-8 px-6 py-12 rounded-lg shadow-md border"
+>
     <div class="text-2xl font-bold">
         <slot name="title" />
     </div>
@@ -42,7 +45,7 @@ const { images, id } = Astro.props;
                 </div>
 
                 <!-- Container -->
-                <div class="relative px-16 pb-8">
+                <div class="relative sm:px-16 sm:pb-8 px-8 pb-6">
                     {
                         images?.map((image) => {
                             return (
@@ -67,7 +70,7 @@ const { images, id } = Astro.props;
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="var(--primary)"
-                        class="w-12 h-12"
+                        class="sm:w-12 sm:h-12 w-8 h-8"
                     >
                         <path
                             fill-rule="evenodd"
@@ -85,7 +88,7 @@ const { images, id } = Astro.props;
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="var(--primary)"
-                        class="w-12 h-12"
+                        class="sm:w-12 sm:h-12 w-8 h-8"
                     >
                         <path
                             fill-rule="evenodd"
