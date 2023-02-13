@@ -25,7 +25,8 @@ title = title ? `${title} | Musikahan - Tagum City` : 'Musikahan - Tagum City';
         <div class="relative">
             <AppNav />
             <slot />
-            <AppFooter />
+            <!-- Do not display footer in /schedule page -->
+            {Astro.url.pathname !== '/schedule' ? <AppFooter /> : null}
         </div>
     </body>
 </html>
