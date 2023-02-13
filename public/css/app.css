@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Rodger";
+    src: url("../assets/fonts/rodger-black.ttf");
+}
+@font-face {
+    font-family: "Berlin";
+    src: url("../assets/fonts/Berlin.ttf");
+}
+.main-font{
+    font-family: "Rodger";
+}
+.secondary-font{
+    font-family: "Berlin";
+}
