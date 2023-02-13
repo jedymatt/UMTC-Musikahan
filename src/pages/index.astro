@@ -1,10 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
 ---
-
+<link rel="stylesheet" href="/css/app.css">
 <Layout>
 	<main>
-		<div class="h-screen">Truly Tagum - City of Harmony</div>
+		<div class= "landing">
+			<div class="blurr-background">
+				<h4 class="secondary-text secondary-font" >Truly Tagum</h4>
+				<div class="main_text"><h1 class="main-font">The City in Harmony</h1></div>
+				
+				<h5 class="secondary-theme">musikahan</h5>
+			</div>
+			<svg class="music-staff" id="eukGjsf86Li1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 668" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><g style="mix-blend-mode:color" transform="matrix(-1.013501 0 0 1 1932.739024-56.770981)"><path d="M0,257.883709q423.488739-120.220011,836.008383-54.216868q264.012571,44.787846,240.44002,108.433734c-23.572551,63.645888-492.666319,161.141958-273.441594,227.899423s412.519643-232.613933,714.248297-154.824515q301.728654,77.789418,403.090623,0" transform="matrix(.999553-.029891 0.029891 0.999553-22.142753 119.277533)" fill="none" stroke="#fff" stroke-width="3.84"/><path d="M0,257.883709q423.488739-120.220011,836.008383-54.216868q264.012571,44.787846,240.44002,108.433734c-23.572551,63.645888-492.666319,161.141958-273.441594,227.899423s412.519643-232.613933,714.248297-154.824515q301.728654,77.789418,403.090623,0" transform="matrix(.99765 0.068512-.068512 0.99765 17.488371-123.078698)" fill="none" stroke="#fff" stroke-width="3.84"/><path d="M0,257.883709q423.488739-120.220011,836.008383-54.216868q264.012571,44.787846,240.44002,108.433734c-23.572551,63.645888-492.666319,161.141958-273.441594,227.899423s412.519643-232.613933,714.248297-154.824515q301.728654,77.789418,403.090623,0" transform="translate(-9.771031 42.430594)" fill="none" stroke="#fff" stroke-width="3.84"/><path d="M0,257.883709q423.488739-120.220011,836.008383-54.216868q264.012571,44.787846,240.44002,108.433734c-23.572551,63.645888-492.666319,161.141958-273.441594,227.899423s412.519643-232.613933,714.248297-154.824515q301.728654,77.789418,403.090623,0" transform="matrix(.999679 0.025351-.025351 0.999679-.519079-24.22445)" fill="none" stroke="#fff" stroke-width="3.84"/><path style="mix-blend-mode:color" d="M0,257.883709q423.488739-120.220011,836.008383-54.216868q264.012571,44.787846,240.44002,108.433734c-23.572551,63.645888-492.666319,161.141958-273.441594,227.899423s412.519643-232.613933,714.248297-154.824515q301.728654,77.789418,403.090623,0" transform="matrix(.99844-.055829 0.055829 0.99844-32.679614 192.435211)" fill="none" stroke="#fff" stroke-width="3.84"/></g></svg>
+
+		</div>
+		
+		
 		<div class="min-h-screen">
 			<div class="p-12">
 				<span class="text-4xl font-bold">Latest News</span>
@@ -65,3 +76,54 @@ import Layout from "../layouts/Layout.astro";
 		</div>
 	</main>
 </Layout>
+<style lang="css">
+	.landing{
+		background-image: url('/assets/images/CITYHALL.jpg');
+		background-position: center;
+		width: 100%;
+		height: 100vh;
+		text-align: center;
+		padding-top: 30vh;
+	}	
+	.main_text{
+		font-size:15vh ;
+		width: 100%;
+		height: auto;
+		z-index: 2;
+		position: relative;
+	}
+	.music-staff{
+		margin-top: -500px;
+		z-index: 0;
+		position: relative;
+	}
+	.secondary-text{
+		color: white;
+		margin-bottom: -50px;
+		font-weight: bold;
+		font-size: 9vh;
+		z-index: 2;
+		position: relative;;
+	}
+	.secondary-theme{
+		font-size: 4vh;
+		z-index: 2;
+		position: relative;
+	}
+	.blurr-background{
+		width: fit-content;
+		padding:30px;
+		margin: auto;
+		position: relative;
+		z-index:1;
+		border-radius: 40%;
+		backdrop-filter: blur(5px) saturate(70%);
+	}
+
+	@media (max-width:520px){
+		.main_text{
+			font-size: 8vh;
+		}
+	}
+
+</style>
