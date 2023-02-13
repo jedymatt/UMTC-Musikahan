@@ -1,10 +1,10 @@
 ---
-import AppNavLink from "./AppNavLink.astro";
+import AppNavLink from './AppNavLink.astro';
 
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = `/${pathname.slice(1)}`;
-
 ---
+
 <!-- 
 <nav
     class="flex items-center justify-center uppercase tracking-wide flex-col sm:flex-row"
@@ -82,7 +82,6 @@ const currentPath = `/${pathname.slice(1)}`;
         </AppNavLink>
     </div>
 </nav> -->
-
 <div class="floating-nav">
     <div id="about" class="float-button" data-status="1">
         <svg
@@ -151,83 +150,75 @@ const currentPath = `/${pathname.slice(1)}`;
 </div>
 
 <script lang="javascript">
-    
     var pathname = window.location.pathname;
-    var lastPartOfPathname = pathname.substring(pathname.lastIndexOf("/") + 1);
+    var lastPartOfPathname = pathname.substring(pathname.lastIndexOf('/') + 1);
 
-    document.getElementById("about").addEventListener("click", function() {
-        if(lastPartOfPathname == 'about-us')
-            return;
-        redirect('about-us')
+    document.getElementById('about').addEventListener('click', function () {
+        if (lastPartOfPathname == 'about-us') return;
+        redirect('about-us');
     });
-    document.getElementById("news").addEventListener("click", function() {
-        if(lastPartOfPathname == 'news')
-            return;
-        redirect('news')
+    document.getElementById('news').addEventListener('click', function () {
+        if (lastPartOfPathname == 'news') return;
+        redirect('news');
     });
-    document.getElementById("schedule").addEventListener("click", function() {
-        if(lastPartOfPathname == 'schedule')
-            return;
-        redirect('schedule')
+    document.getElementById('schedule').addEventListener('click', function () {
+        if (lastPartOfPathname == 'schedule') return;
+        redirect('schedule');
     });
-    document.getElementById("home").addEventListener("click", function() {
-        if(lastPartOfPathname == '')
-            return;
-        redirect('/')
+    document.getElementById('home').addEventListener('click', function () {
+        if (lastPartOfPathname == '') return;
+        redirect('/');
     });
-    const currentButton = document.querySelector(`[data-status="0"]`)
-    if(lastPartOfPathname == 'schedule'){
-        const schedule = document.querySelector(`[data-status="2"]`)
-        currentButton.dataset.status = "2"
-        schedule.dataset.status = "0"
-        schedule.classList.add("active")
-    }else if(lastPartOfPathname == 'news'){
-        const news = document.querySelector(`[data-status="3"]`)
-        currentButton.dataset.status = "3"
-        news.dataset.status = "0"
-        news.classList.add("active")
-    }else if(lastPartOfPathname == 'about-us'){
-        const schedule = document.querySelector(`[data-status="1"]`)
-        currentButton.dataset.status = "1"
-        schedule.dataset.status = "0"
-        schedule.classList.add("active")
+    const currentButton = document.querySelector(`[data-status="0"]`);
+    if (lastPartOfPathname == 'schedule') {
+        const schedule = document.querySelector(`[data-status="2"]`);
+        currentButton.dataset.status = '2';
+        schedule.dataset.status = '0';
+        schedule.classList.add('active');
+    } else if (lastPartOfPathname == 'news') {
+        const news = document.querySelector(`[data-status="3"]`);
+        currentButton.dataset.status = '3';
+        news.dataset.status = '0';
+        news.classList.add('active');
+    } else if (lastPartOfPathname == 'about-us') {
+        const schedule = document.querySelector(`[data-status="1"]`);
+        currentButton.dataset.status = '1';
+        schedule.dataset.status = '0';
+        schedule.classList.add('active');
     }
 
-    function redirect(text){
+    function redirect(text) {
         window.location.href = text;
     }
-
 </script>
 
 <style lang="css">
-    
-    .floating-nav:hover > .float-button[data-status="1"]{
+    .floating-nav:hover > .float-button[data-status='1'] {
         transform: translateX(-135px);
         /* animation: idle1 2s infinite ease-in-out 0.7s; */
     }
-    
-    .floating-nav:hover >  .float-button[data-status="2"]{
+
+    .floating-nav:hover > .float-button[data-status='2'] {
         transform: translate(-100px, -100px);
         /* animation: idle2 2s infinite ease-in-out 0.7s; */
     }
-    
-    .floating-nav:hover >  .float-button[data-status="3"]{
+
+    .floating-nav:hover > .float-button[data-status='3'] {
         transform: translateY(-135px);
         /* animation: idle3 2s infinite ease-in-out 0.7s; */
     }
 
-
-    .float-button[data-status="1"]{
+    .float-button[data-status='1'] {
         transform: translate(-10px, 5px);
     }
-    .float-button[data-status="2"]{
+    .float-button[data-status='2'] {
         transform: translate(-10px, -10px);
     }
-    .float-button[data-status="3"]{
+    .float-button[data-status='3'] {
         transform: translate(7px, -6px);
     }
 
-    .floating-nav{
+    .floating-nav {
         position: fixed;
         bottom: 0;
         right: 0;
@@ -236,11 +227,11 @@ const currentPath = `/${pathname.slice(1)}`;
         z-index: 100;
     }
 
-    .float-button:hover{
+    .float-button:hover {
         background-color: #135a2e;
     }
 
-    .float-button{
+    .float-button {
         position: absolute;
         bottom: 20px;
         right: 20px;
@@ -252,11 +243,11 @@ const currentPath = `/${pathname.slice(1)}`;
         transition-property: transform, background-color;
         transition-duration: 0.5s;
     }
-    
-    .active{
+
+    .active {
         z-index: 1000;
     }
-/* 
+    /* 
     @keyframes idle1{
         0%{transform: translate(-135px, 0);}
         20%{transform: translate(-140px, -5px);}
@@ -283,5 +274,4 @@ const currentPath = `/${pathname.slice(1)}`;
         80%{transform: translate(-5px, -130px);}
         0%{transform: translate(0, -135px);}
     } */
-
 </style>

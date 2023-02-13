@@ -157,7 +157,7 @@ const { images, id } = Astro.props;
     function showSlides(n) {
         slideIndex = n;
         var i;
-        var slides = thisComponent.getElementsByClassName("slide");
+        var slides = thisComponent.getElementsByClassName('slide');
         if (n > slides.length - 1) {
             slideIndex = 0;
         }
@@ -167,34 +167,34 @@ const { images, id } = Astro.props;
         }
 
         for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+            slides[i].style.display = 'none';
         }
-        slides[slideIndex].style.display = "block";
+        slides[slideIndex].style.display = 'block';
 
-        const indicators = thisComponent.getElementsByClassName("indicator");
+        const indicators = thisComponent.getElementsByClassName('indicator');
         for (let i = 0; i < indicators.length; i++) {
-            indicators[i].classList.remove("active");
+            indicators[i].classList.remove('active');
         }
-        indicators[slideIndex].classList.add("active");
+        indicators[slideIndex].classList.add('active');
     }
 
-    var indicators = thisComponent.getElementsByClassName("indicator");
+    var indicators = thisComponent.getElementsByClassName('indicator');
     for (let i = 0; i < indicators.length; i++) {
-        indicators[i].addEventListener("click", () => {
+        indicators[i].addEventListener('click', () => {
             showSlides(i);
         });
     }
 
     // Next/previous controls
     thisComponent
-        .getElementsByClassName("next-button")[0]
-        .addEventListener("click", () => {
+        .getElementsByClassName('next-button')[0]
+        .addEventListener('click', () => {
             plusSlides(1);
         });
 
     thisComponent
-        .getElementsByClassName("prev-button")[0]
-        .addEventListener("click", () => {
+        .getElementsByClassName('prev-button')[0]
+        .addEventListener('click', () => {
             plusSlides(-1);
         });
 </script>
