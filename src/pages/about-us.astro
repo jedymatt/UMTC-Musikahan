@@ -3,13 +3,19 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="About Us">
-    <main>
-        <div class="min-h-screen">
-            <div class="bg-white">
+    <main class="relative">
+        <div
+            id="section1"
+            class="min-h-screen text-[var(--umtc-primary)] w-full"
+        >
+            <div
+                id="fixed-text"
+                class="fixed transition-all duration-300 ease-in-out"
+            >
                 <div class="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8">
-                    <div class="text-center">
+                    <div class="text-center uppercase">
                         <h2
-                            class="text-lg font-semibold text-[var(--umtc-primary)]"
+                            class="text-2xl font-bold text-[var(--umtc-primary)]"
                         >
                             About us
                         </h2>
@@ -20,49 +26,139 @@ import Layout from '../layouts/Layout.astro';
                                 alt="UMTC Logo"
                             />
                         </div>
-                        <p
-                            class="mt-4 text-4xl font-bold tracking-tight text-[var(--umtc-primary)] sm:text-5xl lg:text-6xl"
+                        <h1
+                            class="mt-4 text-4xl font-black tracking-tight text-[var(--umtc-primary)] sm:text-5xl lg:text-6xl"
                         >
                             University of Mindanao Tagum College
-                        </p>
-
-                        <p class="mx-auto mt-5 max-w-xl text-xl text-gray-500">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Laudantium iste facilis fugit aspernatur,
-                            commodi tempora!
-                        </p>
-                    </div>
-                    <div class="text-center">
-                        Cards here with the developer's profile
-                    </div>
-                    <div class="mt-16 flex justify-center items-center">
-                        <div class="relative">
-                            <div
-                                class="rounded-md h-72 w-48 -rotate-[10deg] absolute z-[1] overflow-clip"
-                            >
-                                <img
-                                    src="https://picsum.photos/seed/1/200/300"
-                                    alt=""
-                                />
-                            </div>
-                            <div
-                                class="rounded-md h-72 w-48 -rotate-[24deg] overflow-clip"
-                            >
-                                <img
-                                    src="https://picsum.photos/seed/2/200/300"
-                                    alt=""
-                                />
-                            </div>
-                        </div>
+                        </h1>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div
+            id="section2"
+            class="min-h-screen bg-[var(--umtc-primary)] text-white w-full"
+        >
+            <div class="h-screen flex justify-center items-center">
+                <ul id="dev-names" class="text-2xl text-center tracking-wide">
+                    <li class="dev-name">Ken LLoyd Lindaan Billones</li>
+                    <li class="dev-name">Dandreb Inguito</li>
+                    <li class="dev-name">Leonard Loja</li>
+                    <li class="dev-name">Jhon Opiala</li>
+                    <li class="dev-name">Purot Raymond</li>
+                    <li class="dev-name">Jedy Matt Tabasco</li>
+                </ul>
             </div>
         </div>
     </main>
 </Layout>
 
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
     :root {
         --umtc-primary: #af2532;
     }
+    .fade-out {
+        opacity: 0;
+    }
+    #sticky-text {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1;
+        transition: all 0.3s ease-in-out;
+    }
+    .dev-name {
+        font-family: 'Space Mono', monospace;
+    }
+    .dev-name {
+        color: #fff;
+        font-family: monospace;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: 0.15em solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: 0.15em; /* Adjust as needed */
+        animation: typing 3.5s steps(30, end),
+            blink-caret 0.5s step-end infinite;
+    }
+
+    .dev-name:nth-child(2) {
+        animation-duration: 4s;
+    }
+    .dev-name:nth-child(3) {
+        animation-duration: 6s;
+    }
+    .dev-name:nth-child(4) {
+        animation-duration: 8s;
+    }
+    .dev-name:nth-child(5) {
+        animation-duration: 8.2s;
+    }
+    .dev-name:nth-child(6) {
+        animation-duration: 8.6s;
+    }
+
+    /* The typing effect */
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+        from,
+        to {
+            border-color: transparent;
+        }
+        50% {
+            border-color: orange;
+        }
+    }
 </style>
+
+<script lang="js">
+    window.addEventListener('scroll', function () {
+        var scrollPos = window.scrollY;
+        var section1 = document.querySelector('#section1').offsetTop;
+        var section2 = document.querySelector('#section2').offsetTop;
+        var windowHeight = window.innerHeight;
+        var stickyText = document.querySelector('#fixed-text');
+
+        if (scrollPos >= section1 && scrollPos < section2) {
+            stickyText.classList.add('fixed');
+        } else {
+            stickyText.classList.remove('fixed');
+        }
+
+        if (scrollPos + windowHeight >= section2) {
+            var section2Visibility =
+                (scrollPos + windowHeight - section2) / windowHeight;
+            if (section2Visibility > 0.5) {
+                stickyText.style.opacity = 0;
+            } else {
+                stickyText.style.opacity = 1 - section2Visibility * 2;
+            }
+        } else {
+            stickyText.style.opacity = 1;
+        }
+
+        // if scroll postion is in section 2, then remove hidden class in .dev-names
+        if (scrollPos + windowHeight >= section2) {
+            var section2Visibility =
+                (scrollPos + windowHeight - section2) / windowHeight;
+            if (section2Visibility > 0.5) {
+                document.querySelector('#dev-names').classList.remove('hidden');
+            } else {
+                document.querySelector('#dev-names').classList.add('hidden');
+            }
+        } else {
+            document.querySelector('#dev-names').classList.add('hidden');
+        }
+
+    });
+</script>
