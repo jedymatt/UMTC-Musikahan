@@ -68,36 +68,37 @@
 <script lang="javascript">
     
     var pathname = window.location.pathname;
-    var lastPartOfPathname = pathname.substring(pathname.lastIndexOf('/') + 1);
+    var lastPartOfPathname = pathname.substring(pathname.indexOf('/'));
+
 
     document.getElementById('about').addEventListener('click', function () {
-        if (lastPartOfPathname == 'about-us.html') return;
-        redirect('about-us.html');
+        if (lastPartOfPathname == '/about-us/') return;
+        redirect('/about-us/');
     });
     document.getElementById('news').addEventListener('click', function () {
-        if (lastPartOfPathname == 'news.html') return;
-        redirect('news.html');
+        if (lastPartOfPathname == '/news/') return;
+        redirect('/news/');
     });
     document.getElementById('schedule').addEventListener('click', function () {
-        if (lastPartOfPathname == 'schedule.html') return;
-        redirect('schedule.html');
+        if (lastPartOfPathname == '/schedule/') return;
+        redirect('/schedule/');
     });
     document.getElementById('home').addEventListener('click', function () {
-        if (lastPartOfPathname == 'index.html') return;
-        redirect('/index.html');
+        if (lastPartOfPathname == '/') return;
+        redirect('/');
     });
     const currentButton = document.querySelector(`[data-status="0"]`);
-    if (lastPartOfPathname == 'schedule.html') {
+    if (lastPartOfPathname == '/schedule/') {
         const schedule = document.querySelector(`[data-status="2"]`);
         currentButton.dataset.status = '2';
         schedule.dataset.status = '0';
         schedule.classList.add('active');
-    } else if (lastPartOfPathname == 'news.html') {
+    } else if (lastPartOfPathname == '/news/') {
         const news = document.querySelector(`[data-status="3"]`);
         currentButton.dataset.status = '3';
         news.dataset.status = '0';
         news.classList.add('active');
-    } else if (lastPartOfPathname == 'about-us.html') {
+    } else if (lastPartOfPathname == '/about-us/') {
         const schedule = document.querySelector(`[data-status="1"]`);
         currentButton.dataset.status = '1';
         schedule.dataset.status = '0';
