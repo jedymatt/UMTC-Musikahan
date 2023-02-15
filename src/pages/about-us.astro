@@ -3,23 +3,23 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="About Us">
-    <main class="relative">
+    <main class="relative w-full">
         <div
             id="section1"
             class="min-h-screen text-[var(--umtc-primary)] w-full"
         >
             <div
                 id="fixed-text"
-                class="fixed transition-all duration-300 ease-in-out"
+                class="fixed h-screen transition-all duration-300 ease-in-out w-full"
             >
-                <div class="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8">
+                <div class="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8 h-screen flex flex-col justify-center items-center">
                     <div class="text-center uppercase">
                         <h2
                             class="text-2xl font-bold text-[var(--umtc-primary)]"
                         >
                             About us
                         </h2>
-                        <div class="mt-16 flex justify-center">
+                        <div class="mt-12 flex justify-center">
                             <img
                                 class="h-44 w-44"
                                 src="/assets/images/umtc-logo.png"
@@ -27,7 +27,7 @@ import Layout from '../layouts/Layout.astro';
                             />
                         </div>
                         <h1
-                            class="mt-4 text-4xl font-black tracking-tight text-[var(--umtc-primary)] sm:text-5xl lg:text-6xl"
+                            class="mt-4 text-4xl font-black tracking-wide text-[var(--umtc-primary)] sm:text-5xl lg:text-6xl"
                         >
                             University of Mindanao Tagum College
                         </h1>

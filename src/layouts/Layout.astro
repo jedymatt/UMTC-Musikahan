@@ -26,12 +26,12 @@ title = title ? `${title} | Musikahan - Tagum City` : 'Musikahan - Tagum City';
             <AppNav />
             <slot />
             <!-- Do not display footer in /schedule page -->
-            {Astro.url.pathname !== '/schedule' ? <AppFooter /> : null}
+            {Astro.url.pathname !== '/schedule.html' ? <AppFooter /> : null}
         </div>
     </body>
 </html>
 
-<style is:global>
+<style is:global is:inline>
     :root {
         --primary: #239a4e;
     }
