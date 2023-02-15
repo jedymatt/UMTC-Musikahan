@@ -69,7 +69,6 @@
     var pathname = window.location.pathname;
     var lastPartOfPathname = pathname.substring(pathname.indexOf('/'));
 
-
     document.getElementById('about').addEventListener('click', function () {
         if (lastPartOfPathname == '/about-us/') return;
         redirect('/about-us/');
