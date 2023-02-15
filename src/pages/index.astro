@@ -541,12 +541,16 @@ import Layout from '../layouts/Layout.astro';
 		} */
     }
 
-    @media (max-width: 1300px) {
+    @media (min-width: 1024px) {
         .landing {
             padding-top: 20vh;
         }
         .secondary-theme {
             font-size: 2rem;
+        }
+
+        h1 > .magic > .magic-text {
+            font-size: 800%;
         }
     }
 
