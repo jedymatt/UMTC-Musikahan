@@ -1,4 +1,6 @@
 ---
+import { map } from 'astro/zod';
+import { getCollection } from 'astro:content';
 import AppFooter from '../components/AppFooter.astro';
 import AppNav from '../components/AppNav.astro';
 
@@ -8,6 +10,9 @@ const landingImages = [
     '/musikahan/umtagum/assets/images/landing/3.jpg',
     '/musikahan/umtagum/assets/images/landing/4.jpg',
 ];
+
+const posts = await getCollection('news');
+const latestNews = posts.slice(0, 3);
 ---
 
 <!DOCTYPE html>
@@ -63,7 +68,9 @@ const landingImages = [
                                 href="#latest-news"
                                 class="text-white hover:underline p-2 rounded-md border-green-800 flex flex-col justify-center items-center"
                             >
-                                <span class="font-semibold text-xl">Latest News</span>
+                                <span class="font-semibold text-xl"
+                                    >Latest News</span
+                                >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 20 20"
@@ -162,7 +169,7 @@ const landingImages = [
                     class="min-h-screen bg-gradient-to-b from-[#40b774] to-[#e6fff2] p-4 sm:p-12"
                 >
                     <div
-                        class="flex justify-center max-w-2xl w-full text-xl font-semibold text-[#0c4621]"
+                        class="flex justify-center w-full text-xl font-semibold text-[#0c4621]"
                     >
                         <div>
                             <div class="font-bold text-3xl text-[#0c4621]">
@@ -170,13 +177,18 @@ const landingImages = [
                             </div>
                             <ul class="mt-4 list-disc list-inside">
                                 <li class="list-item">
-                                    <a
-                                        class="hover:underline underline-offset-4 decoration-2"
-                                        href="/musikahan/umtagum/news/participants-list-up-for-musikahan-festival"
-                                    >
-                                        PARTICIPANTS LIST UP FOR MUSIKAHAN
-                                        FESTIVAL
-                                    </a>
+                                    {
+                                        latestNews.map((post) => {
+                                            return (
+                                                <a
+                                                    class="hover:underline underline-offset-4 decoration-2"
+                                                    href={`/musikahan/umtagum/news/${post.slug}`}
+                                                >
+                                                    {post.data.title}
+                                                </a>
+                                            );
+                                        })
+                                    }
                                 </li>
                             </ul>
                         </div>

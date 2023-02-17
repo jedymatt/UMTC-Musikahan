@@ -1,0 +1,39 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content';
+import AppFooter from '../../components/AppFooter.astro';
+import AppNav from '../../components/AppNav.astro';
+
+export async function getStaticPaths() {
+    const posts = await getCollection('news');
+    return posts.map((post) => ({
+        params: { slug: post.slug },
+        props: post,
+    }));
+}
+type Props = CollectionEntry<'news'>;
+
+const post = Astro.props;
+
+const { Content } = await post.render();
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{post.data.title} | Musikahan - Tagum City</title>
+    </head>
+    <body class="antialiased font-sans bg-green-50">
+        <AppNav />
+        <main class="min-h-screen p-6 sm:p-12 w-full flex justify-center">
+            <article class="prose w-full lg:prose-lg">
+                <h1 class="text-primary">{post.data.title}</h1>
+                <Content />
+            </article>
+        </main>
+        <AppFooter />
+    </body>
+</html>
