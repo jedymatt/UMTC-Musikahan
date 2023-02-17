@@ -1,0 +1,151 @@
+@import "./app.css";
+
+:root {
+  background-image: linear-gradient(
+    to bottom,
+    #d7e3ff,
+    #e8d3fa,
+    #ffc1e1,
+    #ffb4b5,
+    #ffb285,
+    #ffa169,
+    #ff8f4e,
+    #ff7c31,
+    #eb3c48,
+    #c2005e,
+    #85006e,
+    #290072
+  );
+}
+.nav-days {
+  background-image: linear-gradient(
+    to right,
+    #e5054b,
+    #e40068,
+    #d90088,
+    #c400a7,
+    #a02cc5,
+    #8451df,
+    #5c6af2,
+    #007fff,
+    #009aff,
+    #00a7d2,
+    #00ac88,
+    #19ab3a
+  );
+}
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.timeline:after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+.tl-container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+.tl-container:after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -12px;
+  background-color: #fff;
+  border: 4px solid #ff9f55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.left {
+  left: 0;
+}
+.right {
+  left: 50%;
+}
+.left:before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+.right:before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+.right:after {
+  left: -12px;
+}
+.content {
+  padding: 20px 30px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 6px;
+}
+@media screen and (max-width: 600px) {
+  .timeline:after {
+    left: 31px;
+  }
+  .tl-container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .tl-container:before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  .left:after,
+  .right:after {
+    left: 18px;
+  }
+  .right {
+    left: 0%;
+  }
+}
+.top-bar {
+  width: 100%;
+  height: 80px;
+  background-image: url(../assets/images/image_backgroundTheme.jpg);
+  background-size: 150%;
+  background-position: 100% 0;
+  overflow-x: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.top-button {
+  text-align: center;
+  line-height: 70px;
+  height: 80px;
+  flex: 0 0 33%;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.5rem;
+}

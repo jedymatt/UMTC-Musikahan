@@ -1,0 +1,26 @@
+{
+	"name": "umtc-musikahan",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"format": "npx prettier -w **/*.astro --cache"
+	},
+	"dependencies": {
+		"@astrojs/tailwind": "^3.0.1",
+		"@astrojs/vue": "^2.0.1",
+		"@splidejs/splide": "^4.1.4",
+		"@tailwindcss/typography": "^0.5.9",
+		"astro": "^2.0.10",
+		"cursor-effects": "^1.0.11",
+		"tailwindcss": "^3.2.6"
+	},
+	"devDependencies": {
+		"prettier": "^2.8.4",
+		"prettier-plugin-astro": "^0.8.0"
+	}
+}

@@ -1,0 +1,58 @@
+@import "./app.css";
+
+:root {
+  --umtc-primary: #af2532;
+}
+.fade-out {
+  opacity: 0;
+}
+#sticky-text {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+.dev-name {
+  font-family: monospace;
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+.dev-name:nth-child(2) {
+  animation-duration: 4s;
+}
+.dev-name:nth-child(3) {
+  animation-duration: 6s;
+}
+.dev-name:nth-child(4) {
+  animation-duration: 8s;
+}
+.dev-name:nth-child(5) {
+  animation-duration: 8.2s;
+}
+.dev-name:nth-child(6) {
+  animation-duration: 8.6s;
+}
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  0%,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}

@@ -1,0 +1,95 @@
+---
+import AppFooter from '../components/AppFooter.astro';
+import AppNav from '../components/AppNav.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="/musikahan/umtc/favicon.ico"
+            type="image/x-icon"
+        />
+        <meta name="generator" content={Astro.generator} />
+        <title>About Us | Musikahan - Tagum City</title>
+        <link rel="stylesheet" href="/musikahan/umtc/css/about-us.css" />
+    </head>
+    <body class="antialiased font-sans">
+        <div>
+            <AppNav />
+            <main class="relative w-full">
+                <div>
+                    <div
+                        class="flex justify-center items-center sticky top-0 min-h-screen bg-red-50"
+                    >
+                        <div
+                            class="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8 h-screen flex flex-col justify-center items-center astro-GKQ7OEFR"
+                        >
+                            <div class="text-center uppercase astro-GKQ7OEFR">
+                                <h2
+                                    class="text-2xl font-bold text-[var(--umtc-primary)] astro-GKQ7OEFR"
+                                >
+                                    About us
+                                </h2>
+                                <div
+                                    class="mt-12 flex justify-center astro-GKQ7OEFR"
+                                >
+                                    <img
+                                        class="h-44 w-44"
+                                        src="/musikahan/umtc/assets/images/umtc-logo.png"
+                                        alt="UMTC Logo"
+                                    />
+                                </div>
+                                <h1
+                                    class="mt-4 text-4xl font-black tracking-wide text-[var(--umtc-primary)] sm:text-5xl lg:text-6xl astro-GKQ7OEFR"
+                                >
+                                    University of Mindanao Tagum College
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="flex justify-center items-center sticky top-0 min-h-screen bg-[var(--umtc-primary)]"
+                    >
+                        <iframe
+                            class="bg-red-800 aspect-video w-3/4 h-auto"
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/rrnfyWqR_78?loop=1&list=PLvnE0eNRZrNIFjINBLfTe1MEQ78ygelaD&autoplay=1"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div
+                    class="flex justify-center items-center sticky top-0 min-h-screen bg-[var(--umtc-primary)]"
+                >
+                    <div>
+                        <div
+                            class="font-mono text-white text-center text-3xl sm:text-4xl"
+                        >
+                            Developers:
+                        </div>
+                        <ul
+                            id="dev-names"
+                            class="mt-4 text-xl sm:text-2xl text-center tracking-wide"
+                        >
+                            <li class="dev-name">Ken LLoyd Lindaan Billones</li>
+                            <li class="dev-name">Dandreb Inguito</li>
+                            <li class="dev-name">Leonard Loja</li>
+                            <li class="dev-name">Jhon Opiala</li>
+                            <li class="dev-name">Raymond Purot</li>
+                            <li class="dev-name">Jedy Matt Tabasco</li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+            <AppFooter />
+        </div>
+    </body>
+</html>

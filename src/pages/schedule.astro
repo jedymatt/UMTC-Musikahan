@@ -1,0 +1,1509 @@
+---
+import AppNav from '../components/AppNav.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link
+            rel="shortcut icon"
+            href="/musikahan/umtc/favicon.ico"
+            type="image/x-icon"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content="Astro v2.0.10" />
+        <title>Schedule | Musikahan - Tagum City</title>
+        <link rel="stylesheet" href="/musikahan/umtc/css/schedule.css" />
+    </head>
+    <body>
+        <div class="relative">
+            <AppNav />
+            <main>
+                <div id="scrollbar" class="top-bar">
+                    <div style="display: flex; white-space: nowrap">
+                        <div class="top-button">&nbsp</div>
+                        <div
+                            id="day1"
+                            onclick="scrollToDiv(1)"
+                            class="top-button"
+                        >
+                            Day 1
+                        </div>
+                        <div
+                            id="day2"
+                            onclick="scrollToDiv(2)"
+                            class="top-button"
+                        >
+                            Day 2
+                        </div>
+                        <div
+                            id="day3"
+                            onclick="scrollToDiv(3)"
+                            class="top-button"
+                        >
+                            Day 3
+                        </div>
+                        <div
+                            id="day4"
+                            onclick="scrollToDiv(4)"
+                            class="top-button"
+                        >
+                            Day 4
+                        </div>
+                        <div class="top-button">&nbsp</div>
+                    </div>
+                </div>
+                <div id="day1-container" class="day-container">
+                    <!-- Day 1 Contents -->
+                    <div>
+                        <div class="timeline">
+                            <div class="flex justify-center">
+                                <div class="sm:w-1/2 w-full mt-4 mb-2">
+                                    <div class="content text-center z-[2]">
+                                        <h2 class="text-2xl font-bold">
+                                            February 16, 2023
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container left">
+                                <div class="content">
+                                    <h2 class="font-bold">9AM</h2>
+                                    <div>
+                                        <p>Musikahan Goes Digital</p>
+
+                                        <img
+                                            class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                            src="/musikahan/umtc/assets/images/location/c-atrium-1.jpg"
+                                            alt=""
+                                        />
+
+                                        <figcaption
+                                            class="mt-3 flex text-sm text-gray-500"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                                class="h-5 w-5 flex-none text-gray-400"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+
+                                            <span class="ml-2">
+                                                City Atrium - City Hall, JV
+                                                Ayala Avenue
+                                            </span>
+                                        </figcaption>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container left">
+                                <div class="content">
+                                    <h2 class="font-bold">9AM</h2>
+                                    <div>
+                                        <p>
+                                            Master Class on Philippine Theater
+                                            for Grades 7 & 8 with Nestor
+                                            Horfilla
+                                        </p>
+                                        <img
+                                            class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                            src="/musikahan/umtc/assets/images/location/c-th.jpg"
+                                            alt=""
+                                        />
+                                        <figcaption
+                                            class="mt-3 flex text-sm text-gray-500"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                                class="h-5 w-5 flex-none text-gray-400"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+
+                                            <span class="ml-2"
+                                                >City Theater Hall - Tagum City
+                                                Cultural Center</span
+                                            >
+                                        </figcaption>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container right">
+                                <div class="content">
+                                    <h2 class="font-bold">10AM</h2>
+                                    <div>
+                                        <p>Festival Opening Ceremonies</p>
+                                        <img
+                                            class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                            src="/musikahan/umtc/assets/images/location/c-atrium-1.jpg"
+                                            alt=""
+                                        />
+                                        <figcaption
+                                            class="mt-3 flex text-sm text-gray-500"
+                                        >
+                                            <!-- Heroicon name: mini/camera -->
+
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                                class="h-5 w-5 flex-none text-gray-400"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+
+                                            <span class="ml-2"
+                                                >City Atrium - City Hall, JV
+                                                Ayala Avenue</span
+                                            >
+                                        </figcaption>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container right">
+                                <div class="content">
+                                    <h2 class="font-bold">10AM</h2>
+                                    <div>
+                                        <p>Opening Live Stream</p>
+                                        <!-- <p >
+                      TODO: picture of the venue here
+                    </p> -->
+                                        <img
+                                            class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                            src="/musikahan/umtc/assets/images/location/c-squre-2.jpg"
+                                            alt=""
+                                        />
+                                        <figcaption
+                                            class="mt-3 flex text-sm text-gray-500"
+                                        >
+                                            <!-- Heroicon name: mini/camera -->
+
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                                class="h-5 w-5 flex-none text-gray-400"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+
+                                            <span class="ml-2"
+                                                >City Square - City Hall, JV
+                                                Ayala Avenue</span
+                                            >
+                                        </figcaption>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container right">
+                                <div class="content">
+                                    <h2 class="font-bold">10AM</h2>
+                                    <div>
+                                        <p>Opening Live Stream</p>
+                                        <!-- <p >
+                      TODO: picture of the venue here
+                    </p> -->
+                                        <img
+                                            class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                            src="/musikahan/umtc/assets/images/location/c-th.jpg"
+                                            alt=""
+                                        />
+                                        <figcaption
+                                            class="mt-3 flex text-sm text-gray-500"
+                                        >
+                                            <!-- Heroicon name: mini/camera -->
+
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                                class="h-5 w-5 flex-none text-gray-400"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+
+                                            <span class="ml-2"
+                                                >City Theater Hall - Tagum City
+                                                Cultural Center</span
+                                            >
+                                        </figcaption>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container left">
+                                <div class="content">
+                                    <h2 class="font-bold">4PM</h2>
+                                    <div>
+                                        <p>SPA Presents (Matinee Show)</p>
+                                        <!-- <p >
+                      TODO: picture of the venue here
+                    </p> -->
+                                        <img
+                                            class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                            src="/musikahan/umtc/assets/images/location/c-atrium-1.jpg"
+                                            alt=""
+                                        />
+                                        <figcaption
+                                            class="mt-3 flex text-sm text-gray-500"
+                                        >
+                                            <!-- Heroicon name: mini/camera -->
+
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                                class="h-5 w-5 flex-none text-gray-400"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+
+                                            <span class="ml-2"
+                                                >City Atrium - City Hall, JV
+                                                Ayala Avenue</span
+                                            >
+                                        </figcaption>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container left">
+                                <div class="content">
+                                    <h2 class="font-bold">4PM</h2>
+                                    <div>
+                                        <p>Live Stream</p>
+                                        <!-- <p >
+                      TODO: picture of the venue here
+                    </p> -->
+                                        <img
+                                            class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                            src="/musikahan/umtc/assets/images/location/c-squre-1.jpg"
+                                            alt=""
+                                        />
+                                        <figcaption
+                                            class="mt-3 flex text-sm text-gray-500"
+                                        >
+                                            <!-- Heroicon name: mini/camera -->
+
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                                class="h-5 w-5 flex-none text-gray-400"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+
+                                            <span class="ml-2"
+                                                >City Square - City Hall, JV
+                                                Ayala Avenue</span
+                                            >
+                                        </figcaption>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container left">
+                                <div class="content">
+                                    <h2 class="font-bold">4PM</h2>
+                                    <div>
+                                        <p>Live Stream</p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-th.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Theater Hall - Tagum
+                                                    City Cultural Center</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container right">
+                                <div class="content">
+                                    <h2 class="font-bold">7PM</h2>
+                                    <div>
+                                        <p>Live Stream</p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-atrium-1.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Atrium - City Hall, JV
+                                                    Ayala Avenue</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container right">
+                                <div class="content">
+                                    <h2 class="font-bold">7PM</h2>
+                                    <div>
+                                        <p>Barangay Musikahan Grand Finals</p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-squre-2.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Square - City Hall, JV
+                                                    Ayala Avenue</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container right">
+                                <div class="content">
+                                    <h2 class="font-bold">7PM</h2>
+                                    <div>
+                                        <p>SPA Presents (Gala Show)</p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-th.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Theater Hall - Tagum
+                                                    City Cultural Center</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    id="day2-container"
+                    class="day-container"
+                    style="display: none"
+                >
+                    <!-- Day 2 Contents -->
+                    <div>
+                        <div class="timeline">
+                            <div class="flex justify-center">
+                                <div class="sm:w-1/2 w-full mt-4 mb-2">
+                                    <div class="content text-center z-[2]">
+                                        <h2 class="text-2xl font-bold">
+                                            February 17, 2023
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container left">
+                                <div class="content">
+                                    <h2 class="font-bold">9AM-11AM</h2>
+                                    <div>
+                                        <p>
+                                            Rondal-Awit (Open Category) (Vocal
+                                            Solo & Ensemble)
+                                        </p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-atrium-1.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Atrium - City Hall, JV
+                                                    Ayala Avenue</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container left">
+                                <div class="content">
+                                    <h2 class="font-bold">9AM-11AM</h2>
+                                    <div>
+                                        <p>Live Stream</p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-squre-2.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Square - City Hall, JV
+                                                    Ayala Avenue</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container right">
+                                <div class="content">
+                                    <h2 class="font-bold">1PM-4PM</h2>
+                                    <div>
+                                        <p>Rondalla Solo Instrument Playing</p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-atrium-1.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Atrium - City Hall, JV
+                                                    Ayala Avenue</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container left">
+                                <div class="content">
+                                    <h2 class="font-bold">6PM</h2>
+                                    <div>
+                                        <p>Musikahan Music Video</p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-atrium-1.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Atrium - City Hall, JV
+                                                    Ayala Avenue</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container right">
+                                <div class="content">
+                                    <h2 class="font-bold">7PM</h2>
+                                    <div>
+                                        <p>
+                                            Musikahan Features: Tingog Partylist
+                                            Pasasalamat Concert
+                                        </p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-squre-2.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Square - City Hall, JV
+                                                    Ayala Avenue</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container right">
+                                <div class="content">
+                                    <h2 class="font-bold">7PM</h2>
+                                    <div>
+                                        <p>Live Stream</p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-th.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Theater Hall - Tagum
+                                                    City Cultural Center</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    id="day3-container"
+                    class="day-container"
+                    style="display: none"
+                >
+                    <!-- Day 3 Contents -->
+                    <div class="min-h-screen">
+                        <div class="timeline">
+                            <div class="flex justify-center">
+                                <div class="sm:w-1/2 w-full mt-4 mb-2">
+                                    <div class="content text-center z-[2]">
+                                        <h2 class="text-2xl font-bold">
+                                            February 18, 2023
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container left">
+                                <div class="content">
+                                    <h2 class="font-bold">8AM</h2>
+                                    <div>
+                                        <p>SPA Presents (Matinee Show)</p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-atrium-1.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Atrium - City Hall, JV
+                                                    Ayala Avenue</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container left">
+                                <div class="content">
+                                    <h2 class="font-bold">8AM</h2>
+                                    <div>
+                                        <p>
+                                            Master Class on Dramaturgy for Grade
+                                            9 & 10 with Nestor Horfilla
+                                        </p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-th.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Theater Hall - Tagum
+                                                    City Cultural Center</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container right">
+                                <div class="content">
+                                    <h2 class="font-bold">9AM - 11AM</h2>
+                                    <div>
+                                        <p>Himig Handog (Choral Youth)</p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-atrium-1.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Atrium - City Hall, JV
+                                                    Ayala Avenue</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container left">
+                                <div class="content">
+                                    <h2 class="font-bold">1PM - 5PM</h2>
+                                    <div>
+                                        <p>
+                                            Himig Handog (Choral Open)
+                                            (Quartet/Quintet)
+                                        </p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-atrium-1.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Atrium - City Hall, JV
+                                                    Ayala Avenue</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container right">
+                                <div class="content">
+                                    <h2 class="font-bold">6PM</h2>
+                                    <div>
+                                        <p>
+                                            Visiting Artist (Loboc Childrens
+                                            Choir and NCCA)
+                                        </p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-atrium-1.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Atrium - City Hall, JV
+                                                    Ayala Avenue</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container right">
+                                <div class="content">
+                                    <h2 class="font-bold">6PM</h2>
+                                    <div>
+                                        <p>SPA Presents (Gala Show)</p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-th.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Theater Hall - Tagum
+                                                    City Cultural Center</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container left">
+                                <div class="content">
+                                    <h2 class="font-bold">7PM</h2>
+                                    <div>
+                                        <p>PasiklaBAND Grand Finals</p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-squre-2.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Square - City Hall, JV
+                                                    Ayala Avenue</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    id="day4-container"
+                    class="day-container"
+                    style="display: none"
+                >
+                    <!-- Day 4 Contents -->
+                    <div class="min-h-screen">
+                        <div class="timeline">
+                            <div class="flex justify-center">
+                                <div class="sm:w-1/2 w-full mt-4 mb-2">
+                                    <div class="content text-center z-[2]">
+                                        <h2 class="text-2xl font-bold">
+                                            February 19, 2023
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container left">
+                                <div class="content">
+                                    <h2 class="font-bold">10AM - 12NN</h2>
+                                    <div>
+                                        <p>MUSIKAHAN BROADCAST</p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-atrium-1.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Atrium - City Hall, JV
+                                                    Ayala Avenue</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container right">
+                                <div class="content">
+                                    <h2 class="font-bold">2PM</h2>
+                                    <div>
+                                        <p>FESTIVAL CLOSING CEREMONIES</p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-atrium-1.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Atrium - City Hall, JV
+                                                    Ayala Avenue</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container left">
+                                <div class="content">
+                                    <h2 class="font-bold">4PM</h2>
+                                    <div>
+                                        <p>LIVE STREAM</p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-atrium-1.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Atrium - City Hall, JV
+                                                    Ayala Avenue</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container left">
+                                <div class="content">
+                                    <h2 class="font-bold">4PM</h2>
+                                    <div>
+                                        <p>KONSIERTO SA KAHAPUNON</p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-squre-2.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Square - City Hall, JV
+                                                    Ayala Avenue</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container left">
+                                <div class="content">
+                                    <h2 class="font-bold">4PM</h2>
+                                    <div>
+                                        <p>LIVE STREAM</p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-th.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Theater Hall - Tagum
+                                                    City Cultural Center</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container right">
+                                <div class="content">
+                                    <h2 class="font-bold">6PM</h2>
+                                    <div>
+                                        <p>LIVE STREAM</p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-atrium-1.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Atrium - City Hall, JV
+                                                    Ayala Avenue</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container right">
+                                <div class="content">
+                                    <h2 class="font-bold">6PM</h2>
+                                    <div>
+                                        <p>
+                                            2023 TRIBUTE TO THE UNITED
+                                            TAGUMENYOS
+                                        </p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-squre-2.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Square - City Hall, JV
+                                                    Ayala Avenue</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container right">
+                                <div class="content">
+                                    <h2 class="font-bold">6PM</h2>
+                                    <div>
+                                        <p>LIVE STREAM</p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-th.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Theater Hall - Tagum
+                                                    City Cultural Center</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container left">
+                                <div class="content">
+                                    <h2 class="font-bold">7PM</h2>
+                                    <div>
+                                        <p>BARANGAY MUSIKAHAN CHAMPIONS</p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-squre-2.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Square - City Hall, JV
+                                                    Ayala Avenue</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-container right">
+                                <div class="content">
+                                    <h2 class="font-bold">8PM</h2>
+                                    <div>
+                                        <p>
+                                            PASIKLABand BATTLE OF THE BAND
+                                            CHAMPIONS
+                                        </p>
+                                        <p>
+                                            <!-- TODO: picture of the venue here -->
+                                            <img
+                                                class="p-4 mt-4 bg-white border rounded max-w-sm w-full shadow-sm shadow-teal-200"
+                                                src="/musikahan/umtc/assets/images/location/c-squre-2.jpg"
+                                                alt=""
+                                            />
+                                            <figcaption
+                                                class="mt-3 flex text-sm text-gray-500"
+                                            >
+                                                <!-- Heroicon name: mini/camera -->
+
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="h-5 w-5 flex-none text-gray-400"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+
+                                                <span class="ml-2"
+                                                    >City Square - City Hall, JV
+                                                    Ayala Avenue</span
+                                                >
+                                            </figcaption>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline h-60"></div>
+            </main>
+            <script lang="javascript">
+                function right() {
+                    scrollToDiv('day2');
+                }
+
+                function scrollToDiv(day) {
+                    const container = document.getElementById('scrollbar');
+                    container.scrollTo({
+                        left: (container.scrollWidth / 6) * (day - 1),
+                        behavior: 'smooth',
+                    });
+                    adjustBackground(day);
+                    adjustContent(day);
+                }
+                function adjustBackground(day) {
+                    var x = 100 - (100 / 3) * (day - 1);
+                    var y = (100 / 3) * (day - 1);
+                    const container = document.getElementById('scrollbar');
+                    container.style.transition =
+                        'background-position 1s ease-in-out';
+                    container.style.backgroundPosition = `${x}% ${y}%`;
+                }
+                function adjustContent(day) {
+                    document.getElementById('day1-container').style.display =
+                        'none';
+                    document.getElementById('day2-container').style.display =
+                        'none';
+                    document.getElementById('day3-container').style.display =
+                        'none';
+                    document.getElementById('day4-container').style.display =
+                        'none';
+
+                    document.getElementById(
+                        `day${day}-container`
+                    ).style.display = 'block';
+                }
+            </script>
+            <!-- Do not display footer in /schedule page -->
+        </div>
+    </body>
+</html>

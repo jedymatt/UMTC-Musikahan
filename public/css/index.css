@@ -1,0 +1,183 @@
+@import "./app.css";
+
+.main-font {
+  font-family: "Rodger";
+}
+.secondary-font {
+  font-family: "Berlin";
+}
+
+.landing {
+  background-image: url(../assets/images/CITYHALL.jpg);
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  padding-top: 30vh;
+}
+.main_text {
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  position: relative;
+}
+.music-staff {
+  margin-top: -300px;
+  z-index: 0;
+  width: 100%;
+  position: relative;
+}
+.secondary-text {
+  color: #fff;
+  margin-bottom: -50px;
+  font-weight: 700;
+  font-size: 9vh;
+  z-index: 2;
+  position: relative;
+  text-shadow: 0 0 50px #032305;
+}
+.secondary-theme {
+  color: #fff;
+  font-size: 3rem;
+  z-index: 2;
+  position: relative;
+  font-weight: 600;
+  text-shadow: 0 0 50px #026407;
+}
+.notes {
+  margin-top: -500px;
+  z-index: 0;
+  position: relative;
+  height: 100%;
+}
+.note {
+  position: absolute;
+}
+@keyframes background-pan {
+  0% {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+h1 > .magic > .magic-text {
+  animation: background-pan 3s linear infinite;
+  font-size: 1000%;
+  background: linear-gradient(
+    to right,
+    #ffd000,
+    #eea70d,
+    #d46702,
+    #eea70d,
+    #ffd000
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: white 2px;
+}
+h1 > .magic > .magic-note {
+  --size: clamp(20px, 1.5vw, 30px);
+  animation: scale 1s ease forwards;
+  display: block;
+  height: var(--size);
+  left: var(--note-left);
+  position: absolute;
+  top: var(--note-top);
+  width: var(--size);
+}
+h1 > .magic > .magic-note > svg {
+  animation: rotate 1s ease-in-out infinite;
+  display: block;
+}
+h1 > .magic {
+  display: inline-block;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .landing {
+    padding-top: 20vh;
+  }
+  .secondary-theme {
+    font-size: 2rem;
+  }
+
+  h1 > .magic > .magic-text {
+    font-size: 800%;
+  }
+}
+
+@media (max-width: 820px) {
+  h1 > .magic > .magic-text {
+    font-size: 800%;
+  }
+  .landing {
+    padding-top: 20vh;
+  }
+  .music-staff {
+    margin-top: -200px;
+  }
+}
+@media (max-width: 640px) {
+  h1 > .magic > .magic-text {
+    font-size: 700%;
+  }
+  .secondary-text {
+    font-size: 6vh;
+  }
+  .music-staff {
+    margin-top: -100px;
+  }
+  .secondary-theme {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 525px) {
+  h1 > .magic > .magic-text {
+    font-size: 500%;
+  }
+  .secondary-text {
+    font-size: 5vh;
+    padding-bottom: 20px;
+  }
+  .music-staff {
+    margin-top: -100px;
+  }
+}
+@media (max-width: 400px) {
+  h1 > .magic > .magic-text {
+    font-size: 400%;
+  }
+  .secondary-text {
+    font-size: 4vh;
+    padding-bottom: 20px;
+  }
+  .music-staff {
+    margin-top: -100px;
+  }
+}
+@keyframes scale {
+  0%,
+  to {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(-30deg);
+  }
+  33% {
+    transform: rotate(30deg);
+  }
+  66% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-30deg);
+  }
+}

@@ -1,0 +1,203 @@
+---
+import { map } from 'astro/zod';
+import { getCollection } from 'astro:content';
+import AppFooter from '../components/AppFooter.astro';
+import AppNav from '../components/AppNav.astro';
+
+const landingImages = [
+    '/musikahan/umtc/assets/images/landing/1.jpg',
+    '/musikahan/umtc/assets/images/landing/2.jpg',
+    '/musikahan/umtc/assets/images/landing/3.jpg',
+    '/musikahan/umtc/assets/images/landing/4.jpg',
+];
+
+const posts = await getCollection('news');
+const latestNews = posts.slice(0, 3);
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link
+            rel="shortcut icon"
+            href="/musikahan/umtc/favicon.ico"
+            type="image/x-icon"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Home | Musikahan - Tagum City</title>
+        <link rel="stylesheet" href="/musikahan/umtc/css/index.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+        />
+    </head>
+    <body class="font-sans antialiased bg-primary-20">
+        <div class="relative">
+            <AppNav />
+            <main>
+                <!-- Section 1 -->
+                <div class="landing">
+                    <div>
+                        <h4
+                            class="secondary-text secondary-font tracking-[0.25em]"
+                        >
+                            Truly Tagum
+                        </h4>
+                        <div class="main_text">
+                            <h1 class="main-font">
+                                <span class="magic">
+                                    <span class="magic-text">
+                                        The City in Harmony</span
+                                    >
+                                </span>
+                            </h1>
+                        </div>
+
+                        <h5
+                            class="secondary-theme secondary-font tracking-[0.25em]"
+                        >
+                            "MUSIKAHAN: Pagpalig-on sa Kabaguhan, Kahiusahan ug
+                            Kadaugan!"
+                        </h5>
+
+                        <div>
+                            <a
+                                href="#latest-news"
+                                class="flex flex-col items-center justify-center p-2 text-white border-green-800 rounded-md hover:underline"
+                            >
+                                <span class="text-xl font-semibold">
+                                    Latest News
+                                </span>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                    class="w-5 h-5 m-2 animate-bounce"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M14.77 4.21a.75.75 0 01.02 1.06l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 011.08-1.04L10 8.168l3.71-3.938a.75.75 0 011.06-.02zm0 6a.75.75 0 01.02 1.06l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 111.08-1.04L10 14.168l3.71-3.938a.75.75 0 011.06-.02z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Section 2 -->
+                <div
+                    class="min-h-screen bg-[#40b774] p-4 sm:p-12 flex flex-col gap-6 sm:gap-8"
+                >
+                    <div
+                        class="w-full text-4xl font-black text-center sm:text-8xl text-green-50"
+                    >
+                        Barangay Musikahan
+                    </div>
+                    <div class="flex-grow">
+                        <iframe
+                            class="w-full h-auto rounded-lg aspect-video"
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/2PUOErcCYhg"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <!-- Section 3 -->
+                <div
+                    id="latest-news"
+                    class="min-h-screen bg-[#40b774] p-4 sm:p-12"
+                >
+                    <div
+                        class="flex justify-center w-full text-xl font-semibold text-[#0c4621]"
+                    >
+                        <div>
+                            <div class="text-3xl font-bold text-white">
+                                Latest News
+                            </div>
+                            <div class="mt-6">
+                                <div
+                                    class="grid grid-cols-1 gap-4 sm:grid-cols-3"
+                                >
+                                    {
+                                        latestNews.map((post) => {
+                                            return (
+                                                <a
+                                                    class="relative block rounded-md shadow-md overflow-clip group"
+                                                    href={`/musikahan/umtc/news/${post.slug}`}
+                                                >
+                                                    {post.data.heroImage ? (
+                                                        <div>
+                                                            <img
+                                                                class="object-cover object-center w-full h-auto transition-all duration-300 group-hover:scale-110"
+                                                                src={
+                                                                    post.data
+                                                                        .heroImage
+                                                                }
+                                                                alt={
+                                                                    post.data
+                                                                        .title
+                                                                }
+                                                            />
+                                                            <div class="absolute inset-x-0 bottom-0 p-4 text-white transition-all duration-300 group-hover:bg-gradient-to-t from-purple-700/50">
+                                                                {
+                                                                    post.data
+                                                                        .title
+                                                                }
+                                                            </div>
+                                                        </div>
+                                                    ) : (
+                                                        <div class="w-full h-auto border">
+                                                            {post.data.title}
+                                                        </div>
+                                                    )}
+                                                </a>
+                                            );
+                                        })
+                                    }
+                                </div>
+                            </div>
+                            <div class="mt-6 text-white">
+                                <a
+                                    href="/musikahan/umtc/news/"
+                                    class="flex flex-row gap-2 hover:underline"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                        class="w-6 h-6"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"
+                                        ></path>
+                                    </svg>
+                                    More news
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <AppFooter />
+        </div>
+        <script
+            is:inline
+            src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"
+        ></script>
+        <script is:inline>
+            new Splide('.splide', {
+                type: 'loop',
+                autoplay: 'true',
+            }).mount();
+        </script>
+    </body>
+</html>
