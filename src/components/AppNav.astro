@@ -1,168 +1,89 @@
-<div class="floating-nav">
-    <div id="about" class="float-button" data-status="1">
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="white"
-            class="w-6 h-6"
-        >
-            <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
-            ></path>
-        </svg>
+---
+const currentPath = Astro.url.pathname;
+---
+
+<nav
+    class="flex items-center justify-center uppercase tracking-wide flex-col sm:flex-row bg-[#effdf1]"
+>
+    <div
+        class="z-50 space-x-6 fixed bottom-4 w-fit shadow-md rounded-full bg-[#effdf1] py-2 px-6 flex justify-center gap-2"
+    >
+        <a href="/musikahan/umtagum/" class="un font-bold text-green-600">
+            <div class="flex flex-row gap-2">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                    ></path>
+                </svg>
+
+                <span class="sr-only">Home</span>
+            </div>
+        </a>
+        <a href="/musikahan/umtagum/schedule/" class="un text-green-600">
+            <div class="flex flex-row gap-2">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
+                    ></path>
+                </svg>
+                <span class="sr-only">Schedule</span>
+            </div>
+        </a>
+        <a href="/musikahan/umtagum/news/" class="un text-green-600">
+            <div class="flex flex-row gap-2">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"
+                    ></path>
+                </svg>
+                <span class="sr-only">News</span>
+            </div>
+        </a>
+        <a href="/musikahan/umtagum/about-us/" class="un text-green-600">
+            <div class="flex flex-row gap-2">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
+                    ></path>
+                </svg>
+                <span class="sr-only">About Us</span>
+            </div>
+        </a>
     </div>
-    <div id="schedule" class="float-button" data-status="2">
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="white"
-            class="w-6 h-6"
-        >
-            <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
-            ></path>
-        </svg>
-    </div>
-    <div id="news" class="float-button" data-status="3">
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="white"
-            class="w-6 h-6"
-        >
-            <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"
-            ></path>
-        </svg>
-    </div>
-    <div id="home" class="float-button" data-status="0">
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="white"
-            class="w-6 h-6"
-        >
-            <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-            ></path>
-        </svg>
-    </div>
-</div>
-
-<script lang="javascript">
-    var pathname = window.location.pathname;
-    var lastPartOfPathname = pathname.substring(pathname.indexOf('/'));
-
-    document.getElementById('about').addEventListener('click', function () {
-        if (lastPartOfPathname == '/about-us/') return;
-        redirect('/about-us/');
-    });
-    document.getElementById('news').addEventListener('click', function () {
-        if (lastPartOfPathname == '/news/') return;
-        redirect('/news/');
-    });
-    document.getElementById('schedule').addEventListener('click', function () {
-        if (lastPartOfPathname == '/schedule/') return;
-        redirect('/schedule/');
-    });
-    document.getElementById('home').addEventListener('click', function () {
-        if (lastPartOfPathname == '/') return;
-        redirect('/');
-    });
-    const currentButton = document.querySelector(`[data-status="0"]`);
-    if (lastPartOfPathname == '/schedule/') {
-        const schedule = document.querySelector(`[data-status="2"]`);
-        currentButton.dataset.status = '2';
-        schedule.dataset.status = '0';
-        schedule.classList.add('active');
-    } else if (lastPartOfPathname == '/news/') {
-        const news = document.querySelector(`[data-status="3"]`);
-        currentButton.dataset.status = '3';
-        news.dataset.status = '0';
-        news.classList.add('active');
-    } else if (lastPartOfPathname == '/about-us/') {
-        const schedule = document.querySelector(`[data-status="1"]`);
-        currentButton.dataset.status = '1';
-        schedule.dataset.status = '0';
-        schedule.classList.add('active');
-    }
-
-    function redirect(text) {
-        window.location.href = text;
-    }
-</script>
-
-<style lang="css">
-    .floating-nav:hover > .float-button[data-status='1'] {
-        transform: translateX(-135px);
-        /* animation: idle1 2s infinite ease-in-out 0.7s; */
-    }
-
-    .floating-nav:hover > .float-button[data-status='2'] {
-        transform: translate(-100px, -100px);
-        /* animation: idle2 2s infinite ease-in-out 0.7s; */
-    }
-
-    .floating-nav:hover > .float-button[data-status='3'] {
-        transform: translateY(-135px);
-        /* animation: idle3 2s infinite ease-in-out 0.7s; */
-    }
-
-    .float-button[data-status='1'] {
-        transform: translate(-10px, 5px);
-    }
-    .float-button[data-status='2'] {
-        transform: translate(-10px, -10px);
-    }
-    .float-button[data-status='3'] {
-        transform: translate(7px, -6px);
-    }
-
-    .floating-nav {
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        width: 200px;
-        height: 200px;
-        z-index: 100;
-    }
-
-    .float-button:hover {
-        background-color: #135a2e;
-    }
-
-    .float-button {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        background-color: #239b51;
-        padding: 20px;
-        border-radius: 100%;
-        cursor: pointer;
-        box-shadow: 0 0 5px #0c4c06;
-        transition-property: transform, background-color;
-        transition-duration: 0.5s;
-        border-color: beige;
-        border-width: 1px;
-    }
-
-    .active {
-        z-index: 1000;
-    }
-</style>
+</nav>

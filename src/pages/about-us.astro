@@ -1,165 +1,91 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import AppFooter from '../components/AppFooter.astro';
+import AppNav from '../components/AppNav.astro';
 ---
 
-<Layout title="About Us">
-    <main class="relative w-full">
-        <div
-            id="section1"
-            class="min-h-screen text-[var(--umtc-primary)] w-full"
-        >
-            <div
-                id="fixed-text"
-                class="fixed h-screen transition-all duration-300 ease-in-out w-full"
-            >
-                <div
-                    class="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8 h-screen flex flex-col justify-center items-center"
-                >
-                    <div class="text-center uppercase">
-                        <h2
-                            class="text-2xl font-bold text-[var(--umtc-primary)]"
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="/musikahan/umtagum/favicon.ico" type="image/x-icon">
+        <meta name="generator" content={Astro.generator} />
+        <title>About Us | Musikahan - Tagum City</title>
+        <link rel="stylesheet" href="/musikahan/umtagum/css/about-us.css" />
+    </head>
+    <body class="antialiased font-sans">
+        <div>
+            <AppNav />
+            <main class="relative w-full">
+                <div>
+                    <div
+                        class="flex justify-center items-center sticky top-0 min-h-screen bg-red-50"
+                    >
+                        <div
+                            class="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8 h-screen flex flex-col justify-center items-center astro-GKQ7OEFR"
                         >
-                            About us
-                        </h2>
-                        <div class="mt-12 flex justify-center">
-                            <img
-                                class="h-44 w-44"
-                                src="/assets/images/umtc-logo.png"
-                                alt="UMTC Logo"
-                            />
+                            <div class="text-center uppercase astro-GKQ7OEFR">
+                                <h2
+                                    class="text-2xl font-bold text-[var(--umtc-primary)] astro-GKQ7OEFR"
+                                >
+                                    About us
+                                </h2>
+                                <div
+                                    class="mt-12 flex justify-center astro-GKQ7OEFR"
+                                >
+                                    <img
+                                        class="h-44 w-44"
+                                        src="/musikahan/umtagum/assets/images/umtc-logo.png"
+                                        alt="UMTC Logo"
+                                    />
+                                </div>
+                                <h1
+                                    class="mt-4 text-4xl font-black tracking-wide text-[var(--umtc-primary)] sm:text-5xl lg:text-6xl astro-GKQ7OEFR"
+                                >
+                                    University of Mindanao Tagum College
+                                </h1>
+                            </div>
                         </div>
-                        <h1
-                            class="mt-4 text-4xl font-black tracking-wide text-[var(--umtc-primary)] sm:text-5xl lg:text-6xl"
-                        >
-                            University of Mindanao Tagum College
-                        </h1>
+                    </div>
+                    <div
+                        class="flex justify-center items-center sticky top-0 min-h-screen bg-[var(--umtc-primary)]"
+                    >
+                        <iframe
+                            class="bg-red-800 aspect-video w-3/4 h-auto"
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/rrnfyWqR_78?loop=1&list=PLvnE0eNRZrNIFjINBLfTe1MEQ78ygelaD&autoplay=1"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
-            </div>
+                <div
+                    class="flex justify-center items-center sticky top-0 min-h-screen bg-[var(--umtc-primary)]"
+                >
+                    <div>
+                        <div
+                            class="font-mono text-white text-center text-3xl sm:text-4xl"
+                        >
+                            Developers:
+                        </div>
+                        <ul
+                            id="dev-names"
+                            class="mt-4 text-xl sm:text-2xl text-center tracking-wide"
+                        >
+                            <li class="dev-name">Ken LLoyd Lindaan Billones</li>
+                            <li class="dev-name">Dandreb Inguito</li>
+                            <li class="dev-name">Leonard Loja</li>
+                            <li class="dev-name">Jhon Opiala</li>
+                            <li class="dev-name">Raymond Purot</li>
+                            <li class="dev-name">Jedy Matt Tabasco</li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+            <AppFooter />
         </div>
-        <div
-            id="section2"
-            class="min-h-screen bg-[var(--umtc-primary)] text-white w-full"
-        >
-            <div class="h-screen flex justify-center items-center">
-                <ul id="dev-names" class="text-2xl text-center tracking-wide">
-                    <li class="dev-name">Ken LLoyd Lindaan Billones</li>
-                    <li class="dev-name">Dandreb Inguito</li>
-                    <li class="dev-name">Leonard Loja</li>
-                    <li class="dev-name">Jhon Opiala</li>
-                    <li class="dev-name">Purot Raymond</li>
-                    <li class="dev-name">Jedy Matt Tabasco</li>
-                </ul>
-            </div>
-        </div>
-    </main>
-</Layout>
-
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
-    :root {
-        --umtc-primary: #af2532;
-    }
-    .fade-out {
-        opacity: 0;
-    }
-    #sticky-text {
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        z-index: 1;
-        transition: all 0.3s ease-in-out;
-    }
-    .dev-name {
-        font-family: 'Space Mono', monospace;
-    }
-    .dev-name {
-        color: #fff;
-        font-family: monospace;
-        overflow: hidden; /* Ensures the content is not revealed until the animation */
-        border-right: 0.15em solid orange; /* The typwriter cursor */
-        white-space: nowrap; /* Keeps the content on a single line */
-        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-        letter-spacing: 0.15em; /* Adjust as needed */
-        animation: typing 3.5s steps(30, end),
-            blink-caret 0.5s step-end infinite;
-    }
-
-    .dev-name:nth-child(2) {
-        animation-duration: 4s;
-    }
-    .dev-name:nth-child(3) {
-        animation-duration: 6s;
-    }
-    .dev-name:nth-child(4) {
-        animation-duration: 8s;
-    }
-    .dev-name:nth-child(5) {
-        animation-duration: 8.2s;
-    }
-    .dev-name:nth-child(6) {
-        animation-duration: 8.6s;
-    }
-
-    /* The typing effect */
-    @keyframes typing {
-        from {
-            width: 0;
-        }
-        to {
-            width: 100%;
-        }
-    }
-
-    /* The typewriter cursor effect */
-    @keyframes blink-caret {
-        from,
-        to {
-            border-color: transparent;
-        }
-        50% {
-            border-color: orange;
-        }
-    }
-</style>
-
-<script lang="js">
-    window.addEventListener('scroll', function () {
-        var scrollPos = window.scrollY;
-        var section1 = document.querySelector('#section1').offsetTop;
-        var section2 = document.querySelector('#section2').offsetTop;
-        var windowHeight = window.innerHeight;
-        var stickyText = document.querySelector('#fixed-text');
-
-        if (scrollPos >= section1 && scrollPos < section2) {
-            stickyText.classList.add('fixed');
-        } else {
-            stickyText.classList.remove('fixed');
-        }
-
-        if (scrollPos + windowHeight >= section2) {
-            var section2Visibility =
-                (scrollPos + windowHeight - section2) / windowHeight;
-            if (section2Visibility > 0.5) {
-                stickyText.style.opacity = 0;
-            } else {
-                stickyText.style.opacity = 1 - section2Visibility * 2;
-            }
-        } else {
-            stickyText.style.opacity = 1;
-        }
-
-        // if scroll postion is in section 2, then remove hidden class in .dev-names
-        if (scrollPos + windowHeight >= section2) {
-            var section2Visibility =
-                (scrollPos + windowHeight - section2) / windowHeight;
-            if (section2Visibility > 0.5) {
-                document.querySelector('#dev-names').classList.remove('hidden');
-            } else {
-                document.querySelector('#dev-names').classList.add('hidden');
-            }
-        } else {
-            document.querySelector('#dev-names').classList.add('hidden');
-        }
-    });
-</script>
+    </body>
+</html>

@@ -1,62 +1,39 @@
 ---
-import PostCard from '../components/PostCard.astro';
-import Layout from '../layouts/Layout.astro';
+import AppFooter from '../components/AppFooter.astro';
+import AppNav from '../components/AppNav.astro';
 ---
 
-<Layout title="News">
-    <main>
-        <div
-            class="sm:p-12 px-6 flex flex-col items-center justify-center gap-12"
-        >
-            <PostCard
-                id="news-1"
-                images={[
-                    'https://picsum.photos/1280/720?random=1',
-                    'https://picsum.photos/1280/720?random=2',
-                    'https://picsum.photos/1280/720?random=3',
-                ]}
-            >
-                <h2 slot="title">Lorem ipsum, dolor sit</h2>
-                <p slot="description">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Numquam dolore accusamus repellat, error assumenda voluptate
-                    reiciendis at ea expedita, eaque sequi maiores dicta libero
-                    tempora doloribus nihil. Nostrum, tenetur aliquid!
-                </p>
-                <span slot="source">Source: News TV</span>
-            </PostCard>
-            <PostCard
-                id="news-2"
-                images={[
-                    'https://picsum.photos/1280/720?random=2',
-                    'https://picsum.photos/1280/720?random=3',
-                ]}
-            >
-                <h2 slot="title">Lorem ipsum, dolor sit</h2>
-                <p slot="description">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Numquam dolore accusamus repellat, error assumenda voluptate
-                    reiciendis at ea expedita, eaque sequi maiores dicta libero
-                    tempora doloribus nihil. Nostrum, tenetur aliquid!
-                </p>
-                <span slot="source">Source: News TV</span>
-            </PostCard>
-            <PostCard
-                id="news-3"
-                images={[
-                    'https://picsum.photos/1280/720?random=4',
-                    'https://picsum.photos/1280/720?random=5',
-                ]}
-            >
-                <h2 slot="title">Lorem ipsum, dolor sit</h2>
-                <p slot="description">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Numquam dolore accusamus repellat, error assumenda voluptate
-                    reiciendis at ea expedita, eaque sequi maiores dicta libero
-                    tempora doloribus nihil. Nostrum, tenetur aliquid!
-                </p>
-                <span slot="source">Source: News TV</span>
-            </PostCard>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content={Astro.generator} />
+        <title>News | Musikahan - Tagum City</title>
+        <link rel="stylesheet" href="/musikahan/umtagum/css/news.css" />
+    </head>
+    <body class="antialiased">
+        <div class="relative bg-primary-10 text-primary">
+            <AppNav />
+            <main>
+                <div class="min-h-screen sm:p-12 px-6">
+                    <div class="text-4xl font-black">News</div>
+                    <ul class="mt-6 list-disc list-inside text-primary">
+                        <li class="list-item">
+                            <a
+                                class="hover:underline underline-offset-4 decoration-2"
+                                href="participants-list-up-for-musikahan-festival"
+                            >
+                                PARTICIPANTS LIST UP FOR MUSIKAHAN FESTIVAL
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+            <!-- Do not display footer in /schedule page -->
+            <AppFooter />
         </div>
-    </main>
-</Layout>
+    </body>
+</html>
