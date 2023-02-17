@@ -1,4 +1,6 @@
-# 𝐓𝐑𝐔𝐋𝐘 𝐓𝐀𝐆𝐔𝐌 – 𝐓𝐇𝐄 𝐂𝐈𝐓𝐘 𝐈𝐍 𝐇𝐀𝐑𝐌𝐎𝐍𝐘: 𝟐𝟎𝐓𝐇 𝐌𝐔𝐒𝐈𝐊𝐀𝐇𝐀𝐍 𝐒𝐀 𝐓𝐀𝐆𝐔𝐌 𝐍𝐎𝐖 𝐎𝐅𝐅𝐈𝐂𝐈𝐀𝐋𝐋𝐘 𝐁𝐄𝐆𝐈𝐍.
+---
+title: 'TRULY TAGUM – THE CITY IN HARMONY: 20TH MUSIKAHAN SA TAGUM NOW OFFICIALLY BEGIN.'
+---
 
 _Ed Siasol_
 
@@ -8,7 +10,7 @@ No doubt being dubbed as the Music Capital of the South, the 20th Musikahan sa T
 
 With this year’s theme, “MUSIKAHAN: Pagpalig-on sa Kabaguhan, Kahiusaan ug Kadaugan,” the City Government of Tagum and Tagum City Tourism Arts and Culture Council envision reviving the city’s grandest and most anticipated music festival due to its hiatus causing the threat of the pandemic.
 
-![photo](../../public/assets/images/news/oc-2.JPG)
+![photo](/musikahan/umtagum/assets/images/news/oc-2.JPG)
 
 The opening ceremony was attended by the City Mayor, Rey T. Uy; Vice Gov Oyo L. Uy, President and Chairperson of the Tagum City Tourism Arts and Culture Council, Inc., Ms. Alma L. Uy; Department of Tourism Secretary, Hon. Christina Garcia Frasco; invited guests, officials, sponsors, and other visitors.
 

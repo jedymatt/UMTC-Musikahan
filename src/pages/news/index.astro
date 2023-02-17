@@ -24,20 +24,20 @@ const posts = await getCollection('news');
                 <div class="min-h-screen sm:p-12 px-6">
                     <div class="text-4xl font-black">News</div>
                     <ul class="mt-6 list-disc list-inside text-primary">
-                        <li class="list-item">
-                            {
-                                posts.map((post) => {
-                                    return (
+                        {
+                            posts.map((post) => {
+                                return (
+                                    <li class="list-item">
                                         <a
                                             class="hover:underline underline-offset-4 decoration-2"
                                             href={post.slug}
                                         >
                                             {post.data.title}
                                         </a>
-                                    );
-                                })
-                            }
-                        </li>
+                                    </li>
+                                );
+                            })
+                        }
                     </ul>
                 </div>
             </main>

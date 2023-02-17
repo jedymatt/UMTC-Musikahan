@@ -1,8 +1,10 @@
-# 𝐁𝐀𝐑𝐀𝐍𝐆𝐀𝐘 𝐀𝐏𝐎𝐊𝐎𝐍 𝐒𝐂𝐑𝐄𝐀𝐌𝐒 𝐕𝐈𝐂𝐓𝐎𝐑𝐘
+---
+title: 'BARANGAY APOKON SCREAMS VICTORY'
+---
 
 _Renan Sumalinog_
 
-![photo](../../public/assets/images/news/apokon-1.JPG)
+![photo](/musikahan/umtagum/assets/images/news/apokon-1.JPG)
 
 Deafening noises of triumph and victory. This is what Barangay Apokon manifested as they hailed as the newest victor of the Barangay Musikahan 2023 at the City Hall Square, on February 16, 2023, creating a safe space for the young talented individuals to showcase the prowess of performing arts around the city.
 
@@ -16,9 +18,9 @@ On the other hand, Dr. Richard Daenos, one of the judges of the said competition
 
 “As someone who is also in the field of the performing arts, I felt that the community spirit is being enriched through [youths] giftedness in music, and for that, it gives me inspiration” he quoted. He also conveys that the Tagumenyos are expressive in terms of recreation of music and uses music as a medium to harmonize the community.
 
-|                                                   |                                                   |
-| :-----------------------------------------------: | :-----------------------------------------------: |
-| ![](../../public/assets/images/news/apokon-2.JPG) | ![](../../public/assets/images/news/apokon-3.JPG) |
+|                                                         |                                                         |
+| :-----------------------------------------------------: | :-----------------------------------------------------: |
+| ![](/musikahan/umtagum/assets/images/news/apokon-2.JPG) | ![](/musikahan/umtagum/assets/images/news/apokon-3.JPG) |
 
 -   **1st Runner up: Barangay San Miguel**
 -   **2nd Runner up: CLUSTER 1 (Brgy. Bingcungan, Liboganon, Busaon)**

@@ -176,20 +176,20 @@ const latestNews = posts.slice(0, 3);
                                 Latest News
                             </div>
                             <ul class="mt-4 list-disc list-inside">
-                                <li class="list-item">
-                                    {
-                                        latestNews.map((post) => {
-                                            return (
+                                {
+                                    posts.map((post) => {
+                                        return (
+                                            <li class="list-item">
                                                 <a
                                                     class="hover:underline underline-offset-4 decoration-2"
-                                                    href={`/musikahan/umtagum/news/${post.slug}`}
+                                                    href={post.slug}
                                                 >
                                                     {post.data.title}
                                                 </a>
-                                            );
-                                        })
-                                    }
-                                </li>
+                                            </li>
+                                        );
+                                    })
+                                }
                             </ul>
                         </div>
                     </div>
