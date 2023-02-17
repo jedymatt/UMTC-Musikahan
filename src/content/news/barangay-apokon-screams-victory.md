@@ -1,10 +1,7 @@
----
-title: 'BARANGAY APOKON SCREAMS VICTORY'
----
+# 𝐁𝐀𝐑𝐀𝐍𝐆𝐀𝐘 𝐀𝐏𝐎𝐊𝐎𝐍 𝐒𝐂𝐑𝐄𝐀𝐌𝐒 𝐕𝐈𝐂𝐓𝐎𝐑𝐘
 
-_Renan Sumalinog_
 
-![photo](/musikahan/umtagum/assets/images/news/apokon-1.JPG)
+![photo](../../../public/assets/images/news/apokon-1.jpg)
 
 Deafening noises of triumph and victory. This is what Barangay Apokon manifested as they hailed as the newest victor of the Barangay Musikahan 2023 at the City Hall Square, on February 16, 2023, creating a safe space for the young talented individuals to showcase the prowess of performing arts around the city.
 
@@ -18,11 +15,13 @@ On the other hand, Dr. Richard Daenos, one of the judges of the said competition
 
 “As someone who is also in the field of the performing arts, I felt that the community spirit is being enriched through [youths] giftedness in music, and for that, it gives me inspiration” he quoted. He also conveys that the Tagumenyos are expressive in terms of recreation of music and uses music as a medium to harmonize the community.
 
-|                                                         |                                                         |
-| :-----------------------------------------------------: | :-----------------------------------------------------: |
-| ![](/musikahan/umtagum/assets/images/news/apokon-2.JPG) | ![](/musikahan/umtagum/assets/images/news/apokon-3.JPG) |
+|                                                   |                                                   |
+| :-----------------------------------------------: | :-----------------------------------------------: |
+| ![](../../../public/assets/images/news/apokon-2.jpg) | ![](../../../public/assets/images/news/apokon-3.jpg) |
 
 -   **1st Runner up: Barangay San Miguel**
 -   **2nd Runner up: CLUSTER 1 (Brgy. Bingcungan, Liboganon, Busaon)**
 
 The Barangay Musikahan is one of the competitions and events that the Tagum City Historical and Cultural Center organises. For more updates on the events and competitions, you may follow and like our Facebook page.
+
+Words | Renan Sumalinog, The Tageum Pen
